@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVC</title>
+    <!-- ========== All Css Link Here  -->
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/slick.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <!-- ========== Navbar START == -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container navbar_area d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
+          <div class="d-flex align-items-center d-lg-none">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <img src="images/person/person.png" alt="img">
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bookings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Invoices</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-none d-lg-flex align-items-center">
+            <img src="images/person/person.png" alt="img">
+          </div>
+        </div>
+      </nav>
+      
+    <!-- ========== Navbar END == -->
+    <!-- ========== Banner Area START == -->
+    <section id="banner_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 banner_col_bg_img">
+                    <img class="w-100" src="images/banner/container.png" alt="banner">
+                </div>
+            </div>
+            
+        </div>
+     </section>
+    <!-- ========== Banner Area END == -->
+    <!-- ========== Booking Status START == -->
+     <section id="bookting_status_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10 position-relative">
+                    <div class="banner_card">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Sokhna</button>
+                              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Marina</button>
+                              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Sharm</button>
+                              <button class="nav-link" id="nav-matrouh-tab" data-bs-toggle="tab" data-bs-target="#nav-matrouh" type="button" role="tab" aria-controls="nav-matrouh" aria-selected="false">Matrouh</button>
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <div class="row sokhna_card_one">
+                                    <div class="col-lg-6">
+                                        <div class="sokhna_profile d-flex">
+                                            <img src="images/person/profile.png" alt="profile">
+                                            <div class="sokhna_name">
+                                                <h3>PORTO SOKHNA</h3>
+                                                <div class="d-flex">
+                                                    <span>Cabana Zone</span>
+                                                    <span>#234324</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-1"></div>
+                                    <div class="col-lg-5">
+                                        <!-- Change this CSS code to increase or decrease the percentages below to develop -->
+                                         <style>
+                                            :root {
+                                                    --consumed-percentage: 20%;
+                                                    --rental-percentage: 30%;
+                                                    --remaining-percentage: 50%;
+                                                }
+                                         </style>
+                                         <!-- ======= -->
+                                        <div class="sokhna_progress">
+                                            <div class="sokhna_progress_label">
+                                                <div class="row">
+                                                    <div class="col-3 ps-0 pe-0">
+                                                        <div class="sokhan_label_items">
+                                                            <h4>20</h4>
+                                                            <div class="d-flex justify-content-center">
+                                                                <div class="cricle_box1"></div>
+                                                                <p>Remaining</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 ps-0 pe-0">
+                                                        <div class="sokhan_label_items">
+                                                            <h4>5</h4>
+                                                            <div class="d-flex justify-content-center">
+                                                                <div class="cricle_box2"></div>
+                                                                <p>Consumed</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 ps-0 pe-0">
+                                                        <div class="sokhan_label_items">
+                                                            <h4>5</h4>
+                                                            <div class="d-flex justify-content-center">
+                                                                <div class="cricle_box3"></div>
+                                                                <p>Rental</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 ps-0 pe-0">
+                                                        <div class="sokhan_label_items">
+                                                            <h4>30</h4>
+                                                            <div class="d-flex justify-content-center">
+                                                                <div class="cricle_box"></div>
+                                                                <p>Nights</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                               
+                                                
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-segment progress-food">
+                                                    
+                                                </div>
+                                                <div class="progress-segment progress-clothes">
+                                                    
+                                                </div>
+                                                <div class="progress-segment progress-shelter">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                            <div class="tab-pane fade" id="nav-matrouh" role="tabpanel" aria-labelledby="nav-matrouh-tab">...</div>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 booking_ivermant">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="booking_status">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="title">
+                                            <h3>Upcoming Booking</h3>
+                                            <p>Reminders for your next vacation</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="arrows d-flex">
+                                            <i class="fa fa-angle-left slider_one_left" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-right slider_one_right" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card_slider_main">
+                                            <div class="slider_items">
+                                                <div class="box_area d-flex">
+                                                    <div class="img_bg">
+                                                        <img src="images/icons/calendar-schedule.svg" alt="icons">
+                                                    </div>
+                                                    <div class="box_area_text">
+                                                        <h3>No Bookings added yet</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slider_items">
+                                                <div class="box_area d-flex justify-content-between">
+                                                    <div class="d-flex">
+                                                        <div class="img_bg">
+                                                            <img src="images/icons/Blank-Calendar.svg" alt="icons">
+                                                        </div>
+                                                        <div class="box_area_text">
+                                                            <h4>From Wed to Sun</h4>
+                                                            <h3 class="mt-0">No Bookings added yet</h3>
+                                                            <p>2 Nights • #234324</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="cancel">Cancel</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="booking_status">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="title">
+                                            <h3>Pending invoice</h3>
+                                            <p>You must pay your invoice to start booking</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="arrows d-flex">
+                                            <i class="fa fa-angle-left slider_two_left" aria-hidden="true"></i>
+                                            <i class="fa fa-angle-right slider_two_right" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card_slider_main_two">
+                                            <div class="slider_items">
+                                                <div class="box_area d-flex">
+                                                    <div class="img_bg">
+                                                        <img src="images/icons/receipt-check.svg" alt="icons">
+                                                    </div>
+                                                    <h3>No Invoices added yet</h3>
+                                                </div>
+                                            </div>
+                                            <div class="slider_items">
+                                                <div class="box_area d-flex">
+                                                    <div class="img_bg">
+                                                        <img src="images/icons/receipt-check.svg" alt="icons">
+                                                    </div>
+                                                    <h3>No Invoices added yet</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="calander_area">
+                        <div class="title">
+                            <h3>Let’s go on a vacation</h3>
+                            <p>Find and book a great and relaxing experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Current Month -->
+                <div class="col-md-12 col-sm-12 col-lg-12 calendar">
+                    <div class="calendar-container">
+                        <!-- Current Month -->
+                        <div class="calendar">
+                          <span class="arrow-left" id="prevMonth"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                          <span class="arrow-right forMobile" id="nextMonth"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                          <div class="calendar-header" id="currentMonth1">
+                            <span id="currentMonthTitle1"></span>
+                          </div>
+                          <div class="calendar-weekdays">
+                            <div>Su</div>
+                            <div>Mo</div>
+                            <div>Tu</div>
+                            <div>We</div>
+                            <div>Th</div>
+                            <div>Fr</div>
+                            <div>Sa</div>
+                          </div>
+                          <div class="calendar-body" id="currentMonthBody1"></div>
+                        </div>
+                    
+                        <!-- Next Month -->
+                        <div class="calendar forDesk">
+                          <span class="arrow-right" id="nextMonth"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                          <div class="calendar-header" id="currentMonth2">
+                            <span id="currentMonthTitle2"></span>
+                          </div>
+                          <div class="calendar-weekdays">
+                            <div>Su</div>
+                            <div>Mo</div>
+                            <div>Tu</div>
+                            <div>We</div>
+                            <div>Th</div>
+                            <div>Fr</div>
+                            <div>Sa</div>
+                          </div>
+                          <div class="calendar-body" id="currentMonthBody2"></div>
+                        </div>
+                        
+                      </div>
+                      <div class="row bg_for_booking_avivble">
+                        <div class="col-lg-4">
+                            <div class="booking_avibile">
+                                <p>Color Legend</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="booking_avibile d-flex justify-content-end">
+                                <div class="color_box"></div>
+                                <p>More than <span>50% booked in this zone</span></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="booking_avibile d-flex justify-content-end">
+                                <div class="color_box_two"></div>
+                                <p>More than <span>50% booked in this zone</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-12 zero_p_col">
+                    <div class="form_booking">
+                        <form action="#" method="post">
+                            <div class="all_list_flex d-flex align-items-center">
+                                <div class="contact_name">
+                                    <p>Contract</p>
+                                    <h3>PORTO SOKHNA</h3>
+                                </div>
+                                <div class="contact_name">
+                                    <p>Check-in</p>
+                                    <input type="text" class="form-control" id="startDate" name="startDate" readonly>
+                                </div>
+                                <div class="contact_name">
+                                    <p>Check-out</p>
+                                    <input type="text" class="form-control" id="endDate" name="endDate" readonly>
+                                </div>
+                                <div class="contact_name">
+                                    <p>Selected Stays</p>
+                                    <h3>2 Nights</h3>
+                                </div>
+                                <div class="contact_name forOnlyMobile">
+                                    <p>Fees</p>
+                                    <h3>2,700 EGP</h3>
+                                </div>
+                                <div class="form_submit ms-auto">
+                                    <button type="submit">Book Now</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- ========== Booking Status END == -->
+    <!-- ========== Navbar END == -->
+    <!-- ========== Navbar END == -->
+    <!-- ========== Design Code START == -->
+     <img class="background_murk" src="images/design/background_effect.png" alt="bg">
+    <!-- ========== Design Code END == -->
+    <!-- ========== All JS Link Here  -->
+  
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('.card_slider_main').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            prevArrow: '.slider_one_left',
+            nextArrow: '.slider_one_right'
+        });
+        $('.card_slider_main_two').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            prevArrow: '.slider_two_left',
+            nextArrow: '.slider_two_right'
+        });
+    </script>
+</body>
+</html>

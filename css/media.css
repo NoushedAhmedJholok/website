@@ -1,0 +1,400 @@
+@media (min-width: 300px) and (max-width: 575.98px) { 
+  .booking_avibile{
+    text-align: center;
+    justify-content: center !important;
+  }
+  .nav-tabs .nav-link {
+    margin: 0px 10px;
+    font-size: 12px;
+  }
+  .sokhna_name h3 {
+    font-size: 20px;
+    margin-top: 2px;
+  }
+  .sokhna_profile img {
+    width: 80px;
+    height: 80px;
+  }
+  .sokhna_name span {
+    font-size: 12px;
+    padding: 8px 8px 8px 8px;
+  }
+  .sokhan_label_items h4 {
+    font-size: 16px;;
+  }
+  .sokhan_label_items p {
+    font-size: 10px;
+  }
+  .booking_ivermant {
+    margin-top: 24px;
+  }
+  .booking_status .title h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .booking_status .title p {
+    font-size: 12px;
+  }
+  .booking_status .box_area .img_bg {
+    width: 48px;
+    height: 48px;
+    padding: 10px 0px 0px 9px;
+  }
+  .booking_status .box_area img {
+    width: 80%;
+  }
+  .booking_status .box_area h3 {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .booking_status .box_area {
+    padding: 16px 20px;
+  }
+  .booking_status .box_area_text h4 {
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+  .booking_status .box_area_text p {
+    font-size: 12px;
+  }
+  .booking_status .box_area a {
+    font-family: Quicksand;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #EF3A5D;
+    padding: 7px 19px;
+    background-color: #FDEBEF;
+    border-radius: 100px;
+    text-decoration: none;
+    align-items: center;
+    height: 34px;
+    margin-top: 12px;
+  }
+  .calendar {
+    margin: 0px;
+    border-radius: 16px;
+    padding: 0px;
+    /* position: relative; */
+    /* background-color: #ffffff; */
+  }
+  .calendar-body div {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+  .calendar-weekdays {
+    font-size: 12px;
+  }
+  .calendar-header {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .calander_area .title h3 {
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+  .calander_area .title p {
+    font-size: 12px;
+  }
+  .navbar_area {
+    margin: 0px auto;
+    border-radius: 0px;
+    height: 64px;
+  }
+  .banner_col_bg_img{
+    padding: 0px 0px;
+  }
+  .banner_col_bg_img img{
+    height: 220px;
+  }
+  .bg_for_booking_avivble .booking_avibile p {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .bg_for_booking_avivble .booking_avibile p span {
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+  .bg_for_booking_avivble {
+    background-color: #F7F5FA;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 10px 20px;
+  }
+  .bg_for_booking_avivble .booking_avibile .color_box {
+    width: 16px;
+    height: 16px;
+  }
+  .form_submit button {
+    font-size: 12px;
+    padding: 12px 26px;
+  }
+  .contact_name p {
+    font-size: 12px;
+  }
+  .contact_name h3 {
+    font-size: 16px;
+  }
+  .arrows{
+    display: none !important;
+  }
+  .form_booking {
+    background-color: #ffffff;
+    padding: 19.5px 14px;
+    border-radius: 16px;
+    margin-top: 48px;
+    margin-bottom: 0px;
+  }
+  .zero_p_col{
+    padding: 0px 0px !important;
+  }
+ .login-container {
+	height: 242px;
+	opacity: 1;
+}
+.logo img {
+	height: 64px !important;
+	width: auto;
+	margin: 5px 0px 0px 0px;
+}
+.login-form {
+	background-color: rgb(255, 255, 255);
+	padding: 24px 16px;
+	width: 100%;
+	z-index: 2;
+	margin-top: 70%;
+	position: relative;
+	left: 0%;
+}
+.login-form h2 {
+	font-size: 20px;
+  line-height: 25px;
+}
+.login-form p {
+	font-size: 14px;
+}
+.login-form p a{
+	font-size: 14px;
+}
+.login-form label {
+	font-size: 14px;
+}
+.info-container {
+	font-size: 14px;
+}
+.login-form form {
+	margin-top: 24px;
+}
+.login-form input {
+	font-size: 15px;
+	line-height: 19px;
+	margin-top: 10px;
+}
+.form_button {
+	font-size: 12px;
+	margin-top: 25%;
+	padding: 12px 0px;
+}
+.form_extra_code {
+	font-size: 12px;
+  padding: 12px 0px;
+}
+.col_padding_none{
+  padding-left: 0;
+  padding-right: 0;
+}
+#infoBox {
+	position: fixed;
+	left: -5% !important;
+	width: 111% !important;
+	margin: 0px;
+	bottom: 0px !important;
+	right: 0px !important;
+}
+#closeInfoBox {
+	display: flex !important;
+	justify-content: end;
+}
+.info-box img{
+  width: 100%;
+}
+.row_w_100{
+  width: 100%;
+}
+.otp-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.login-form {
+	padding: 20px 20px !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .booking_avibile{
+    text-align: center;
+    justify-content: center !important;
+  }
+  .login-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    width: 100%;
+    margin-top: 15%;
+  }
+  .logo img {
+    margin: 0px 0px 0px 0px;
+  }
+  .login-form {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 100%;
+    margin-top: 27%;
+  }
+  .info-box {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 200px;
+    /* top: -128%; */
+    /* left: 100%; */
+    margin-left: 10px;
+    bottom: -15px !important;
+    /* right: 35px !important; */
+    left: -10% !important;
+    /* top: -164px; */
+    right: 0% !important;
+    width: 120% !important;
+    padding: 10px 10% !important;
+  }
+  #closeInfoBox {
+    /* display: initial !important; */
+    justify-content: end;
+    display: flex;
+  }
+  #infoIcon img{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .booking_avibile{
+      text-align: center;
+      justify-content: center !important;
+    }
+    .login-form {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      width: 100%;
+      margin-top: 15%;
+    }
+    .logo img {
+      margin: 0px 0px 0px 0px;
+    }
+    .login-form {
+      background-color: #ffffff;
+      padding: 40px;
+      width: 100%;
+      margin-top: 15%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 300px) and (max-width: 991.98px) { 
+    .forMobile{
+        display: initial !important;
+      }
+    .forDesk{
+        display: none !important;
+      }
+      .forOnlyMobile{
+        display: initial !important;
+      }
+      .contact_name{
+        display: none;
+      }
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        background: #ffffff;
+        border-radius: 4px;
+      }
+      .image-container img {
+        
+        display: none;
+      }
+      .login-form {
+        padding: 20px 20px !important;
+      }
+}

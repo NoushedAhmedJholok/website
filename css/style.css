@@ -1,0 +1,816 @@
+/* ========== Google Font Family  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+/* ========== Common Css  */
+body{
+    font-family: "Quicksand", sans-serif;
+    background-color: #F7F5FA;
+    position: relative;
+    /* overflow-y: hidden !important; */
+}
+button, a{
+  transition: all .3s linear
+}
+/* font-family: "Montserrat", sans-serif;  */
+
+/* ========== Navbar Css Start ==  */
+.navbar{
+    padding: 0px;
+}
+.navbar-brand img{
+    height: 48px !important;
+    width: auto !important;
+}
+.navbar_area{
+    background-color: #ffffff;
+    height: 88px;
+    margin:24px auto;
+    padding-left: 23px;
+    padding-right: 23px;
+    border-radius: 16px;
+}
+.nav-link{
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #878787;
+    margin: 0px 16px;
+}
+.nav-item .active{
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #4D308E !important;
+    border-bottom: 1.5px solid #4D308E;
+}
+
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.progress-segment {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #fff;
+    white-space: nowrap;
+}
+.progress-food {
+    width: var(--consumed-percentage);
+    background-color: #BB2FBD; /* Tomato color for food */
+    left: 0;
+}
+.progress-clothes {
+    width: var(--rental-percentage);
+    background-color: #1BBDE9; /* SteelBlue color for clothes */
+    left: var(--consumed-percentage);
+}
+.progress-shelter {
+    width: var(--remaining-percentage);
+    background-color: #4D308E; /* LimeGreen color for shelter */
+    left: calc(var(--consumed-percentage) + var(--rental-percentage));
+}
+.banner_card {
+	background-color: #FFFFFF;
+	border: 1px solid #FCFCFD;
+	border-radius: 16px;
+	padding: 32px;
+	width: 100%;
+	/* position: relative; */
+	/* top: -50%; */
+	margin-top: -13%;
+}
+.nav-tabs .nav-link {
+	border: none;
+    margin: 0px 16px;
+    padding: 10px 0px;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;   
+    color: #878787; 
+}
+.nav-tabs .active{
+	border: none;
+    margin: 0px 16px;
+    padding: 10px 0px;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;  
+    color: #4D308E !important;  
+    border-bottom: 1.5px solid #4D308E !important;
+}
+.sokhna_card_one{
+    margin-top: 24px;
+}
+.sokhna_profile img{
+    width: 100px;
+    height: 100px;
+    margin-right: 13px;
+}
+.sokhna_name h3{
+    font-family: Quicksand;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+    margin-top: 10.5px;
+    color: #2C1B5A;    
+}
+.sokhna_name span{
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #878787; 
+    padding: 8px 16px 8px 16px;   
+    background-color: #F7F5FA;
+    margin-right: 4px;
+    border-radius: 100px;
+}
+.sokhna_progress_label{
+    margin-top: 17px;
+    text-align: center;
+}
+.sokhan_label_items {
+    /* margin: 0px 12px; */
+    text-align: center;
+}
+.sokhan_label_items h4{
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 17.75px;
+    color: #374151;    
+}
+.sokhan_label_items .cricle_box1 {
+	width: 10px;
+	height: 10px;
+	border-radius: 100px;
+	background-color: #4D308E;
+	margin: 4px 4px 0px 0px;
+}
+.sokhan_label_items .cricle_box2 {
+	width: 10px;
+	height: 10px;
+	border-radius: 100px;
+	background-color: #BB2FBD;
+	margin: 4px 4px 0px 0px;
+}
+.sokhan_label_items .cricle_box3 {
+	width: 10px;
+	height: 10px;
+	border-radius: 100px;
+	background-color: #1BBDE9;
+	margin: 4px 4px 0px 0px;
+}
+.sokhan_label_items p{
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.75px;
+    color: #878787;    
+}
+/* ========== Booking Css STart ==  */
+.booking_ivermant{
+   margin-top: 48px;
+}
+.booking_status .title h3{
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #2C1B5A;
+}
+.booking_status .title p{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21.94px;
+    color: #878787;
+}
+.booking_status .arrows i{
+    font-size: 20px;
+    color: #2C1B5A;
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    margin-left: 8px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+.booking_status .box_area{
+    padding: 34px 32px;
+    background-color: #ffffff;
+    border: 1px solid #FCFCFD;
+    border-radius: 16px;
+}
+.booking_status .box_area .img_bg{
+   background-color: #4e308e1e;
+   border-radius: 50px;
+   padding: 18px 19px;
+   width: 72px;
+   height: 72px;
+   margin-right: 16px;
+}
+.booking_status .box_area h3{
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #2C1B5A;
+    margin-top: 22px;
+}
+.booking_status .box_area_text h4{
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+   color: #878787;
+}
+.booking_status .box_area_text p{
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;    
+   color: #878787;
+}
+.booking_status .box_area a{
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #EF3A5D;
+    padding: 14px 32px;
+    background-color: #FDEBEF;
+    border-radius: 100px;
+    text-decoration: none;
+    align-items: center;
+    height: 48px;
+    margin-top: 12px;
+}
+
+.calendar {
+    margin: 10px;
+    border-radius: 16px;
+    padding: 15px;
+    position: relative;
+    background-color: #ffffff;
+  }
+  .selected-start-end {
+    background-color: #4D308E;
+    color: #fff;
+    border-radius: 100px !important;
+  }
+  .selected-range {
+    background-color: #4e308e1f;
+    color: #fff;
+    border-radius: 0px !important;
+  }
+  .calendar-header {
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: center;
+    color: #2C1B5A;
+  }
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-top: 20px;
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.5px;
+    text-align: center;
+    color: #858585;  
+    margin-top: 30px;  
+  }
+  .calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+  }
+  .calendar-body div {
+    position: relative;
+    padding: 24px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22.5px;
+    text-align: center;
+    color: #313131;
+    width: 100% !important;
+    /* height: 54px; */
+  }
+  .calendar-body div:hover {
+    background-color: #4D308E;
+  }
+  .icon {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+  .icon-down::before {
+    content: '\2193'; /* Down arrow */
+  }
+  .icon-up::before {
+    content: '\2191'; /* Up arrow */
+  }
+  .prev-next-month {
+    color: #bbb;
+    opacity: 0.5; /* Less opacity for next and previous month dates */
+    cursor: default;
+  }
+  .prev-next-month:hover {
+    background-color: transparent;
+  }
+
+  .calendar-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .forMobile{
+    display: none;
+  }
+  .forDesk{
+    display: initial;
+  }
+  @media (min-width: 768px) {
+    .calendar-container {
+      grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    }
+   
+  }
+  .arrow-left, .arrow-right {
+    position: absolute;
+    top: 9%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1;
+    background-color: #F7F5FA;
+    height: 40px;
+    padding: 2px 0px 0px 14px;
+    width: 40px;
+    border-radius: 100%;
+  }
+  .arrow-left {
+    left: 0px; /* Adjust to fit nicely outside the calendar */
+  }
+  .arrow-right {
+    right: 0px; /* Adjust to fit nicely outside the calendar */
+  }
+  .booking-info {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #0056b3;
+  }
+.calander_area{
+    padding-top: 48px;
+}
+.calander_area .title h3{
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #2C1B5A;
+}
+.calander_area .title p{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.94px;
+    color: #878787;
+}
+.bg_for_booking_avivble{
+  background-color: #F7F5FA;
+  border-radius: 100px;
+  padding: 16px 32px;
+  margin: 10px 20px;
+}
+.bg_for_booking_avivble .booking_avibile p{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.5px;
+  color: #2C1B5A;
+  margin-bottom: 0px;
+}
+.bg_for_booking_avivble .booking_avibile p span{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.5px;
+  color: #2C1B5A;
+}
+.bg_for_booking_avivble .booking_avibile .color_box{
+  width: 20px;
+  height: 20px;
+  background-color: #1BBDE9;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+.bg_for_booking_avivble .booking_avibile .color_box_two{
+  width: 20px;
+  height: 20px;
+  background-color: #BB2FBD;
+  border-radius: 4px;
+  margin-right: 5px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 99%);
+}
+.form_booking{
+  background-color: #ffffff;
+  padding: 19.5px 32px;
+  border-radius: 16px;
+  margin-top: 48px;
+  margin-bottom: 100px;
+}
+.contact_name p{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #878787;
+  margin-bottom: 3px;
+}
+.contact_name h3{
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #2C1B5A;
+  margin-bottom: 0px;
+}
+.contact_name input{
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #2C1B5A;
+  width:110px;
+  padding: 0;
+  background-color: transparent !important;
+  border: none;
+
+}
+.form-control:focus {
+	color: #212529;
+	background-color: #fff;
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.25);
+}
+.contact_name{
+  margin-right: 48px;
+}
+.form_submit button{
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.5px;
+  color: #FFFFFF;
+  background-color: #4D308E;
+  border-radius: 100px;
+  padding: 14px 32px;
+  border: none;
+}
+.banner_bg_css{
+  background: url(../images/banner/container.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+
+}
+/*  
+================================
+=========== SignUp Page CSS 
+================================
+  */
+  
+  .login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 3;
+  }
+  .logo img{
+      height: 64px !important;
+      width: auto;
+      margin: 24px 0px 0px 24px;
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 50px;
+      position: relative;
+      background-color: white;
+      z-index: 2;
+      border-radius: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  .image-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .image-container img {
+    width: 120%;
+    height: 100vh;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 16px;
+  }
+.info-box h3{
+  font-family: Quicksand;
+  font-size: 16px !important;
+  font-weight: 600;
+  line-height: 24px;
+  color: #2C1B5A;  
+  margin-top: 8px;
+}
+.info-box p{
+  font-family: Quicksand;
+  font-size:  12px !important;
+  font-weight: 500;
+  line-height: 18px;  
+  color: #878787;  
+}
+.info-box{
+  border-radius: 8px;
+  padding: 8px;
+}
+  @media (max-width: 991px) {
+    .login-container {
+      background: url('../images/banner/mobile_login_bg.png') no-repeat center center;
+      background-size: cover;
+      min-height: 242px; /* Set height to 242px in mobile view */
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      font-size: 2rem;
+      z-index: 3;
+      
+    }
+   
+
+    .login-form {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      width: 90%;
+      z-index: 2;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    #closeInfoBox {
+      /* display: initial !important; */
+      justify-content: end;
+      display: flex;
+    }
+  }
+.login-form h2{
+  font-family: Quicksand;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #2C1B5A;  
+}
+.login-form p{
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;  
+  color: #9C98A9;  
+}
+    /* Info Box Styling */
+    .info-box {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      width: 200px;
+      /* top: -128%; */
+      left: 100%;
+      margin-left: 10px;
+      bottom: 42px !important;
+      /* right: 35px !important; */
+      left: -201px !important;
+      /* top: -164px; */
+    }
+
+    .info-container {
+      position: relative;
+      display: inline-block;
+      font-family: Quicksand;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 25px;
+      text-align: left;
+      color: #9C98A9;      
+    }
+
+    .info-box.show {
+      display: block;
+    }
+.login-form label{
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #2C1B5A;  
+}
+.login-form input{
+  border-radius: 8px;
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #9C98A9;  
+  padding: 11.5px 24px;
+  border: 1px solid #4D308E;
+  margin-top: 16px;
+}
+.form_button{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFFFFF; 
+  background-color: #4D308E; 
+  border-radius: 50px;
+  padding: 14px 0px;
+  border: none;
+  margin-top: 40px;
+  transition: all .3s linear;
+}
+.form_extra_code{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #4D308E; 
+  background-color: #4D308E1A; 
+  border-radius: 50px;
+  padding: 14px 0px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 24px;
+}
+.form_button:hover{
+  background-color: #a9a9a9;
+  color: #ffffff;
+}
+.form_extra_code:hover{
+  background-color: #a9a9a9;
+  color: #ffffff;
+}
+#closeInfoBox{
+  display: none;
+}
+    /* Mobile view styling */
+    @media (max-width: 768px) {
+      .info-box {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        border: none;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      .info-box.show {
+        display: block;
+      }
+      #closeInfoBox{
+        display: initial !important;
+      }
+    }
+    .login-form p a{
+      font-family: Quicksand;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 25px;
+      color: #4D308E;
+      text-decoration: none;
+    }
+    .login-form form{
+      margin-top: 40px;
+    }
+    .iti {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .errors{
+      font-family: Quicksand;
+      font-size: 16px !important;
+      font-weight: 600;
+      line-height: 20px;
+      text-align: left;
+  color: #EF3A5D !important;      
+    }
+    .otp-input {
+      display: flex;
+      justify-content: start;
+      margin-bottom: 1rem;
+  }
+  .otp-input input {
+      width: 40px;
+      height: 40px;
+      margin: 0 5px;
+      text-align: center;
+      font-size: 1.2rem;
+      border: 1.5px solid #DDDDDD;
+      border-radius: 4px;
+      background-color: #FFFFFF;
+      color: #000000;
+      padding: 0px !important;
+  }
+  .otp-input input::-webkit-outer-spin-button,
+  .otp-input input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+  .otp-input input[type=number] {
+      -moz-appearance: textfield;
+  }
+  .resent{
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: left;
+color: #9C98A9;    
+  }
+  .resent{
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: left;
+color: #6B7280;    
+  }
+/* ========== Booking Css End ==  */
+/* ========== Navbar Css End ==  */
+/* ========== Navbar Css End ==  */
+/* ========== Design Css START ==  */
+.background_murk {
+	width: 100%;
+	position: absolute;
+	top: 0%;
+	z-index: -9;
+	height: 100vh;
+}
+/* ========== Design Css End ==  */

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- ========== All Css Link Here  -->
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/slick.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body class="bg-white position-relative">
+    
+  <div class="logo">
+    <img src="images/logo.png" alt="logo">
+  </div>
+
+  <div class="container login-container">
+    <div class="row row_w_100 position-relative">
+      <!-- Form Section -->
+      <div class="col-lg-6 col_padding_none">
+        <div class="login-form">
+          <h2>Register</h2>
+          <p class="mb-0">Do you have an account? <a href="#">Log In</a></p>
+          <form>
+            <div class="mb-0">
+                <div class="d-flex justify-content-between">
+                    <label for="email" class="form-label">Email, BP Number</label>
+                    <span class="info-container">
+                        BP Number? 
+                        <i class="fa fa-info-circle" aria-hidden="true" style="cursor: pointer;" id="infoIcon"></i>
+                        <div class="info-box" id="infoBox">
+                            <i class="fa fa-times close-icon" id="closeInfoBox"></i>
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="images/design/checkbank.png" alt="img">
+                                    <h3>Business Partner (BP)</h3>
+                                    <p>Your Business Partner number is the unique identifier in your contract that represents your membership in the Porto Vacation Club database.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+              <input type="email" class="form-control" id="email" placeholder="Enter email">
+              <!-- ==Erros   -->
+               <style>
+                /* .form-control {
+                        border: 1px solid #EF3A5D !important;
+                    }
+                    .form-control::placeholder {
+                        color: #EF3A5D;
+                        opacity: 1;
+                    } */
+               </style>
+              <!-- <p class="errors"><i class="fa fa-info" aria-hidden="true"></i> Sorry, you entered an incorrect Phone Number</p> -->
+            </div>
+            <button type="submit" class="btn btn-primary w-100 form_button">Continue</button>
+          </form>
+          <a href="signup_with_phone.html" class="form_extra_code"><i class="fa fa-phone-square" aria-hidden="true"></i> Register with Phone Number</a>
+        </div>
+      </div>
+
+      <!-- Image Section (Desktop view) -->
+      <div class="col-lg-6 image-container">
+        <img src="images/banner/login_image.png" alt="Login Image">
+      </div>
+    </div>
+  </div>
+<!-- ========== Design Code START == -->
+<img class="background_murk" src="images/design/background_effect.png" alt="bg">
+<!-- ========== Design Code END == -->
+    <!-- ========== All JS Link Here  -->
+  
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+ document.getElementById('infoIcon').addEventListener('click', function() {
+      var infoBox = document.getElementById('infoBox');
+      infoBox.classList.add('show');
+
+      // Ensure the info box opens at the bottom in mobile view
+      if (window.innerWidth <= 768) {
+        infoBox.style.position = 'fixed';
+        infoBox.style.bottom = '0px !important';
+        infoBox.style.left = '0%';
+        infoBox.style.eight = '-10%';
+        infoBox.style.width = '100%';
+        infoBox.style.margin = '0';
+      } else {
+        // For desktop, reset to default positioning
+        infoBox.style.position = 'absolute';
+        infoBox.style.bottom = 'auto';
+        infoBox.style.left = '100%';
+        infoBox.style.width = 'auto';
+      }
+    });
+
+    document.getElementById('closeInfoBox').addEventListener('click', function() {
+      document.getElementById('infoBox').classList.remove('show');
+    });
+
+    // Optional: Hide the info box when clicking outside of it
+    document.addEventListener('click', function(event) {
+      var infoBox = document.getElementById('infoBox');
+      var infoIcon = document.getElementById('infoIcon');
+      if (!infoBox.contains(event.target) && !infoIcon.contains(event.target) && !event.target.classList.contains('close-icon')) {
+        infoBox.classList.remove('show');
+      }
+    });
+    </script>
+</body>
+</html>

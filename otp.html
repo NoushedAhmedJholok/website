@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP - Phone</title>
+    <!-- ========== All Css Link Here  -->
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/slick.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
+     <link rel="stylesheet" href="css/media.css">
+    <style>
+        .login-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px 4px;
+	position: relative;
+	background-color: white;
+	z-index: 2;
+	border-radius: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+    </style>
+</head>
+<body class="bg-white position-relative">
+    
+  <div class="logo">
+    <img src="images/logo.png" alt="logo">
+  </div>
+
+  <div class="container login-container">
+    <div class="row row_w_100 position-relative">
+      <!-- Form Section -->
+      <div class="col-lg-6 col_padding_none">
+        <div class="login-form">
+          <h2>Verify phone number </h2>
+          <p class="mb-0">Enter the code that was sent to  <a href="#">+20 512 450 4131</a></p>
+          <form>
+            <div class="mb-0">
+                <div class="d-flex justify-content-between">
+
+                    
+                </div>
+                <div class="otp-input">
+                    <input type="number" min="0" max="9" required>
+                    <input type="number" min="0" max="9" required>
+                    <input type="number" min="0" max="9" required>
+                    <input type="number" min="0" max="9" required>
+                    <input type="number" min="0" max="9" required>
+                    <input type="number" min="0" max="9" required>
+                </div>
+                <p class="resent">If you didn’t receive code! <span id="timer"></span></p>
+                 <!-- ==Erros   -->
+               <style>
+                /* .form-control {
+                        border: 1px solid #EF3A5D !important;
+                    }
+                    .form-control::placeholder {
+                        color: #EF3A5D;
+                        opacity: 1;
+                    }
+                    .form-control {
+                        color: #EF3A5D !important;
+                        opacity: 1;
+                    } */
+               </style>
+              <!-- <p class="errors"><i class="fa fa-info" aria-hidden="true"></i> Sorry, you entered an incorrect Phone Number</p> -->
+              <!-- === Erros  -->
+            </div>
+            <button type="submit" class="btn btn-primary w-100 form_button" onclick="verifyOTP()">Continue</button>
+            
+          </form>
+        </div>
+      </div>
+
+      <!-- Image Section (Desktop view) -->
+      <div class="col-lg-6 image-container">
+        <img src="images/banner/login_image.png" alt="Login Image">
+      </div>
+    </div>
+  </div>
+<!-- ========== Design Code START == -->
+<img class="background_murk" src="images/design/background_effect.png" alt="bg">
+<!-- ========== Design Code END == -->
+    <!-- ========== All JS Link Here  -->
+  
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+    <script>
+  const inputs = document.querySelectorAll('.otp-input input');
+const timerDisplay = document.getElementById('timer');
+const resendButton = document.getElementById('resendButton');
+let timeLeft = 120; // 2 minutes in seconds
+let timerId;
+
+function startTimer() {
+    timerId = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timerId);
+            timerDisplay.innerHTML = '<a href="#" id="resendLink">Resend</a>';
+            resendButton.disabled = false;
+            inputs.forEach(input => input.disabled = true);
+        } else {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerDisplay.textContent = ` ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            timeLeft--;
+        }
+    }, 1000);
+}
+
+function resendOTP() {
+    // Here you would typically call your backend to resend the OTP
+    alert("New OTP sent!");
+    timeLeft = 120; // Reset the timer to 2 minutes
+    inputs.forEach(input => {
+        input.value = '';
+        input.disabled = false;
+        input.style.backgroundColor = '#FFFFFF'; // Reset the background color when resending OTP
+    });
+    resendButton.disabled = true;
+    inputs[0].focus();
+    clearInterval(timerId);
+    startTimer();
+}
+
+// Handle input in each OTP field
+inputs.forEach((input, index) => {
+    input.addEventListener('input', (e) => {
+        if (e.target.value.length > 1) {
+            e.target.value = e.target.value.slice(0, 1); // Ensure only 1 digit is entered
+        }
+        if (e.target.value.length === 1) {
+            input.style.backgroundColor = '#EDEAF4'; 
+            input.style.borderColor = '#4D308E'; 
+             
+            // Change background color when filled
+            if (index < inputs.length - 1) {
+                inputs[index + 1].focus(); // Move to the next input
+            }
+        } else {
+            input.style.backgroundColor = '#FFFFFF'; // Revert background color if empty
+        }
+    });
+
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !e.target.value) {
+            if (index > 0) {
+                inputs[index - 1].focus(); // Move to the previous input on backspace
+            }
+        }
+        if (e.key === 'e') {
+            e.preventDefault(); // Prevent invalid input like 'e' in number fields
+        }
+    });
+});
+
+function verifyOTP() {
+    const otp = Array.from(inputs).map(input => input.value).join('');
+    if (otp.length === 6) {
+        if (timeLeft > 0) {
+            // Here you would typically send the OTP to your server for verification
+            alert(`OTP Verified: ${otp}`);
+        } else {
+            alert('OTP has expired. Please request a new one.');
+        }
+    } else {
+        alert('Please enter a 6-digit OTP');
+    }
+}
+
+// Handle resend link when timer expires
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'resendLink') {
+        resendOTP();
+    }
+});
+
+startTimer();
+
+
+    </script>
+</body>
+</html>

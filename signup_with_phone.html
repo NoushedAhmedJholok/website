@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Phone</title>
+    <!-- ========== All Css Link Here  -->
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/slick.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
+     <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body class="bg-white position-relative">
+    
+  <div class="logo">
+    <img src="images/logo.png" alt="logo">
+  </div>
+
+  <div class="container login-container">
+    <div class="row row_w_100 position-relative">
+      <!-- Form Section -->
+      <div class="col-lg-6 col_padding_none">
+        <div class="login-form">
+          <h2>Register</h2>
+          <p class="mb-0">Do you have an account? <a href="#">Log In</a></p>
+          <form>
+            <div class="mb-0">
+                <div class="d-flex justify-content-between">
+                    <label for="email" class="form-label">Phone Number</label>
+                    
+                </div>
+                <input type="tel" id="phoneInput" class="form-control" placeholder="Enter phone number">
+                 <!-- ==Erros   -->
+               <style>
+                /* .form-control {
+                        border: 1px solid #EF3A5D !important;
+                    }
+                    .form-control::placeholder {
+                        color: #EF3A5D;
+                        opacity: 1;
+                    }
+                    .form-control {
+                        color: #EF3A5D !important;
+                        opacity: 1;
+                    } */
+               </style>
+              <!-- <p class="errors"><i class="fa fa-info" aria-hidden="true"></i> Sorry, you entered an incorrect Phone Number</p> -->
+              <!-- === Erros  -->
+            </div>
+            <button type="submit" class="btn btn-primary w-100 form_button">Continue</button>
+          </form>
+          <a href="signup.html" class="form_extra_code"><i class="fa fa-envelope" aria-hidden="true"></i> Register with Email or BP</a>
+        </div>
+      </div>
+
+      <!-- Image Section (Desktop view) -->
+      <div class="col-lg-6 image-container">
+        <img src="images/banner/login_image.png" alt="Login Image">
+      </div>
+    </div>
+  </div>
+<!-- ========== Design Code START == -->
+<img class="background_murk" src="images/design/background_effect.png" alt="bg">
+<!-- ========== Design Code END == -->
+    <!-- ========== All JS Link Here  -->
+  
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+    <script>
+   const phoneInput = document.querySelector("#phoneInput");
+
+// Initialize intlTelInput
+const iti = window.intlTelInput(phoneInput, {
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.min.js",
+  initialCountry: "auto", // Automatically detect the user's country
+  geoIpLookup: function(callback) {
+    fetch('https://ipinfo.io/json') // Using ipinfo for GeoIP lookup (you can use other services too)
+      .then(response => response.json())
+      .then(data => {
+        callback(data.country);
+      })
+      .catch(() => {
+        callback("us"); // Fallback to the US in case of failure
+      });
+  }
+});
+
+// After initialization, display the selected country code and number code
+iti.promise.then(() => {
+  const countryData = iti.getSelectedCountryData();
+  phoneInput.value = `+${countryData.dialCode} `;
+});
+
+// Listen for the country change event
+phoneInput.addEventListener("countrychange", function() {
+  const countryData = iti.getSelectedCountryData();
+  phoneInput.value = `+${countryData.dialCode} `;
+});
+
+
+
+    </script>
+</body>
+</html>
