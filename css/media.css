@@ -230,6 +230,111 @@
 .login-form {
 	padding: 20px 20px !important;
 }
+.request_info h3 {
+	font-size: 16px;
+	line-height: 20px;
+}
+.request_info i {
+	width: 36px;
+	height: 36px;
+	padding: 10px 0px 0px 10px;
+	margin-top: -9px;
+}
+.request_info h4 {
+	font-size: 16px;
+	line-height: 16px;
+}
+.request_info p {
+	font-size: 12px;
+}
+.request_info a {
+	font-size: 14px;
+}
+.request_info p span {
+	font-size: 12px;
+}
+.request_info .my_line {
+	margin: 16px 0px;
+}
+.request_info ul li {
+	font-size: 11.63px;
+}
+.card_request_book .box_area h3 {
+	font-size: 14px;
+}
+.card_request_book .box_area_text h4 {
+	font-size: 12px;
+}
+.card_request_book .box_area_text p {
+	font-size: 12px;
+}
+.your_pay_mode {
+	margin-top: 12px;
+}
+.card_request_book .my_line {
+	margin: 12px 0px;
+}
+.card_request_book h3 {
+	font-size: 16px;
+}
+.card_request_book p {
+	font-size: 12px;
+	margin-bottom: 16px;
+}
+.card_request_book span {
+	font-size: 12px;
+}
+.card_request_book p.t_prize_text {
+	font-size: 14px;
+}
+.card_request_book span.t_prize {
+	font-size: 16px;
+}
+.pay_button_mobile{
+  display: initial;
+ }
+ .card_request_book button {
+	font-size: 12px;
+	padding: 12px 29px;
+	width: auto;
+	border: none;
+}
+.pay_button_mobile {
+	padding-top: 20px;
+}
+.pay_button_mobile p{
+  margin-bottom: 0px;
+}
+.pay_button_mobile span{
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+.card_request_book .box_area .img_bg {
+	background-color: #4e308e1e;
+	border-radius: 50px;
+	padding: 14px 14px;
+	width: 58px;
+	height: 58px;
+	margin-right: 16px;
+}
+.card_request_book .box_area .img_bg img{
+	width: 30px;
+}
+.card_request_book {
+	padding: 16px;
+	border-radius: 8px;
+}
+.card_request_book a.download_button {
+	font-size: 12px;
+	padding: 12px 0px;
+}
+.card_request_book a {
+	font-size: 12px;
+	padding: 12px 0px;
+}
+
+
+
 }
 
 

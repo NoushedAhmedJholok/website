@@ -930,6 +930,288 @@ font-size: 16px !important;
 	border-width: 0 2px 2px 0;
 	transform: rotate(45deg);
 }
+/* 
+========================================
+============= Request To Book Page Css 
+======================================== */
+#request_area{
+  margin-top: 32px;
+}
+.request_info h3{
+  font-family: Quicksand;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #2C1B5A;  
+}
+.request_info h4{
+  font-family: Quicksand;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.2199999988079071px;
+  color: #2C1B5A;  
+}
+.request_info p{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #313131;  
+}
+.request_info p span{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #313131;  
+}
+.request_info i {
+	background-color: #ffffff;
+	color: #2C1B5A;
+	width: 40px;
+	height: 40px;
+	padding: 12px 0px 0px 13px;
+	border-radius: 100px;
+  margin-right: 8px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+.request_info a{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #4D308E;  
+  text-decoration: none;
+}
+.request_info .my_line{
+ width: 100%;
+ height: 1px;
+ background-color: #DDDDDD;
+ margin: 24px 0px;
+}
+.request_info ul li{
+  font-family: Quicksand;
+  font-size: 15.63px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #313131;  
+}
+.request_info ul{
+padding-left: 25px !important; 
+}
+.request_info .cardmy .img_bg_here {
+	width: 48px !important;
+	height: 48px !important;
+	background-color: #4D308E1A;
+	border-radius: 100px;
+	display: block;
+	padding: 9px 20px 10px 12px;
+  margin-right: 16px;
+}
+.request_info .cardmy .img_bg_here img{
+  width: 24px;
+  height: 24px;
+  /* padding: 10px 10px 10px 10px; */
+}
+.request_info p.copyri , .request_info p.copyri a{
+  font-family: Quicksand;
+font-size: 12px;
+font-weight: 500;
+line-height: 16px;
+text-align: left;
+color: #313131;
+}
+.request_info{
+  padding-right: 20px;
+}
+
+.card_request_book .box_area .img_bg {
+	background-color: #4e308e1e;
+	border-radius: 50px;
+	padding: 18px 19px;
+	width: 72px;
+	height: 72px;
+	margin-right: 16px;
+}
+.card_request_book .box_area_text h4 {
+	font-family: Quicksand;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	color: #878787;
+  margin-bottom: 0;
+}
+.card_request_book .box_area h3 {
+	font-family: Quicksand;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 25px;
+	color: #2C1B5A;
+	margin-top: 22px;
+  margin-bottom: 0;
+}
+.card_request_book .box_area_text p {
+	font-family: Quicksand;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	color: #878787;
+}
+.card_request_book .your_pay_mode p{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+  text-align: left;
+  color: #878787;
+}
+.your_pay_mode{
+  margin-top: 40px;
+}
+.card_request_book .your_pay_mode img{
+ height: 19px;
+ width: auto;
+ margin-left: 4px;
+}
+.card_request_book{
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #FCFCFD;
+}
+.card_request_book .my_line{
+  width: 100%;
+  height: 1px;
+  background-color: #DDDDDD;
+  margin: 24px 0px;
+ }
+.card_request_book h3{
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: left;
+  color: #222222;  
+  margin-bottom: 24px;
+ }
+.card_request_book p{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;  
+  color: #878787;  
+  margin-bottom: 16px;
+ }
+.card_request_book p.t_prize_text{
+  font-family: Quicksand;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;  
+  color: #878787;  
+  margin-bottom: 16px;
+ }
+.card_request_book span{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;    
+  color: #313131;  
+ }
+.card_request_book span.t_prize{
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;    
+  color: #313131;  
+ }
+.card_request_book button{
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.5px;
+  color: #ffffff; 
+  padding: 14px 0px;
+  background-color: #4D308E; 
+  border-radius: 100px;
+  width: 100%;
+  border: none;
+  margin-top: 24px;
+ }
+ .fa-bars{
+  color: #4D308E;
+  margin-right: 5px;
+  font-size: 20px;
+  cursor: pointer;
+ }
+ .pay_button_mobile{
+  display: none;
+  /* border: 1px  #EDEDED; */
+ }
+ .success_prize{
+  margin-top: 170px;
+ }
+ .success_prize h3{
+  font-family: Quicksand;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.4px;
+  color: #313131; 
+  margin-bottom: 0px; 
+ }
+ .success_prize h4{
+  font-family: Quicksand;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+  color: #878787; 
+  margin-bottom: 0px; 
+ }
+ .card_request_book a {
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 19.5px;
+	color: #ffffff;
+	padding: 14px 0px;
+	background-color: #4D308E;
+	border-radius: 100px;
+	width: 100%;
+	border: none;
+	margin-top: 24px;
+  text-decoration: none;
+  text-align: center;
+  margin: 32px 8px 0px 8px;
+}
+.card_request_book a.download_button {
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 19.5px;
+	color: #4D308E;
+	padding: 14px 0px;
+	background-color: #4D308E1A;
+	border-radius: 100px;
+	width: 100%;
+	border: none;
+	margin-top: 24px;
+  text-decoration: none;
+  text-align: center;
+  margin: 32px 8px 0px 8px;
+}
+.close_button i{
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  font-size: 24px;
+  background-color: #F4F2F7;
+  border-radius: 100px;
+  padding: 10px;
+  cursor: pointer;
+  color: #2C1B5A;
+}
 /* ========== Booking Css End ==  */
 /* ========== Navbar Css End ==  */
 /* ========== Navbar Css End ==  */
