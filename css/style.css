@@ -802,6 +802,84 @@ color: #9C98A9;
     text-align: left;
 color: #6B7280;    
   }
+  .list-unstyled li p{
+    font-family: Quicksand;
+font-size:  16px !important;
+font-weight: 600;
+line-height: 20px;
+text-align: left;
+/* color: #009634; */
+  }
+  .row_w_100 {
+    width: 100%;
+  }
+  .mtnai .progress {
+    height: 6px;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.mtnai .progress-bar {
+    background-color: #009634;
+}
+
+.mtnai .form-horizontal {
+    padding: 25px 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.mtnai .form-group {
+    position: relative;
+}
+
+.mtnai .form-control {
+    padding-right: 40px; /* Ensure space for the eye icon */
+}
+
+/* Adjusted to show the eye icon in the correct position */
+.mtnai .password-toggle {
+position: absolute;
+right: 10px;
+top: 62%;
+transform: translateY(-50%);
+cursor: pointer;
+display: none;
+}
+
+.mtnai .password-toggle i {
+    font-size: 20px;
+    color: #9C98A9;
+}
+
+.mtnai  .form-group.active .password-toggle {
+    display: inline-block;
+}
+
+.mtnai  .form-group input:focus + .password-toggle {
+    display: inline-block;
+}
+
+/* Prevent the icon from shifting to another line */
+.mtnai .form-group {
+    display: flex;
+    align-items: center;
+}
+.mtnai .login-form {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 20px 50px;
+position: relative;
+background-color: white;
+z-index: 2;
+border-radius: 8px;
+top: 60% !important;
+transform: translateY(-50%);
+}
+.mtnai .kpp  {
+font-size: 16px !important;
+}
 /* ========== Booking Css End ==  */
 /* ========== Navbar Css End ==  */
 /* ========== Navbar Css End ==  */
@@ -813,4 +891,5 @@ color: #6B7280;
 	z-index: -9;
 	height: 100vh;
 }
+
 /* ========== Design Css End ==  */
