@@ -397,4 +397,16 @@
       .login-form {
         padding: 20px 20px !important;
       }
+      .mtnai .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 50px;
+        position: relative;
+        background-color: rgb(255, 255, 255) !important;
+        z-index: 2;
+        border-radius: 8px;
+        top: 60% !important;
+        transform: translateY(-50%);
+        }
 }

@@ -5,7 +5,11 @@ body{
     font-family: "Quicksand", sans-serif;
     background-color: #F7F5FA;
     position: relative;
-    /* overflow-y: hidden !important; */
+    overflow-x: hidden !important;
+    background-image: url(../images/design/background_effect.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 button, a{
   transition: all .3s linear
@@ -538,7 +542,7 @@ button, a{
       justify-content: center;
       padding: 20px 50px;
       position: relative;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0);
       z-index: 2;
       border-radius: 8px;
       top: 50%;
@@ -871,7 +875,7 @@ flex-direction: column;
 justify-content: center;
 padding: 20px 50px;
 position: relative;
-background-color: white;
+background-color: rgba(255, 255, 255, 0);
 z-index: 2;
 border-radius: 8px;
 top: 60% !important;
@@ -930,12 +934,5 @@ font-size: 16px !important;
 /* ========== Navbar Css End ==  */
 /* ========== Navbar Css End ==  */
 /* ========== Design Css START ==  */
-.background_murk {
-	width: 100%;
-	position: absolute;
-	top: 0%;
-	z-index: -9;
-	height: 100vh;
-}
 
 /* ========== Design Css End ==  */
