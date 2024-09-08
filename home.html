@@ -223,44 +223,49 @@
                     <div class="data_table">
                         <nav>
                             <div class="d-flex justify-content-between">
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button class="nav-link active" id="nav-jholok4-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok4" type="button" role="tab" aria-controls="nav-jholok4" aria-selected="true">All</button>
-                                    <button class="nav-link" id="nav-jholok3-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok3" type="button" role="tab" aria-controls="nav-jholok3" aria-selected="false">Pending</button>
-                                    <button class="nav-link" id="nav-jholok2-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok2" type="button" role="tab" aria-controls="nav-jholok2" aria-selected="false">Upcoming</button>
-                                    <button class="nav-link" id="nav-jholok1-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok1" type="button" role="tab" aria-controls="nav-jholok1" aria-selected="false">Completed</button>
-                                    <button class="nav-link" id="nav-jholok-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok" type="button" role="tab" aria-controls="nav-jholok" aria-selected="false">Canceled</button>
-                                </div>
-                                <div class="filter_button d-flex">
-                                    <div class="soft_position position-relative">
-                                        <button id="openPopupButton"><i class="fa fa-align-center" aria-hidden="true"></i> Soft</button>
-                                        <div id="popupdorsoft" class="hidden">
-                                            <form id="custom-form" action="/submit" method="post">
-                                                <div class="custom-select">
-                                                    <div class="select-items">
-                                                        <div data-value="newest" class="active">
-                                                            <i class="fa fa-check " aria-hidden="true"></i>Newest
-                                                        </div>
-                                                        <div data-value="oldest">
-                                                            <i class="fa fa-check" aria-hidden="true"></i>Oldest
-                                                        </div>
-                                                        <div data-value="most-amount">
-                                                            <i class="fa fa-check" aria-hidden="true"></i>Most Amount
-                                                        </div>
-                                                        <div data-value="lowest-amount">
-                                                            <i class="fa fa-check" aria-hidden="true"></i>Lowest Amount
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Hidden input to hold the selected value -->
-                                                <input type="hidden" id="selected-option" name="selected-option" value="newest">
-                                            </form>
-                                    
+                                <div class="row w-100">
+                                    <div class="col-lg-8">
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-jholok4-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok4" type="button" role="tab" aria-controls="nav-jholok4" aria-selected="true">All</button>
+                                            <button class="nav-link" id="nav-jholok3-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok3" type="button" role="tab" aria-controls="nav-jholok3" aria-selected="false">Pending</button>
+                                            <button class="nav-link" id="nav-jholok2-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok2" type="button" role="tab" aria-controls="nav-jholok2" aria-selected="false">Upcoming</button>
+                                            <button class="nav-link" id="nav-jholok1-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok1" type="button" role="tab" aria-controls="nav-jholok1" aria-selected="false">Completed</button>
+                                            <button class="nav-link" id="nav-jholok-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok" type="button" role="tab" aria-controls="nav-jholok" aria-selected="false">Canceled</button>
                                         </div>
-                                            
                                     </div>
-                                    
-                                </div>
-                            </div>
+                                    <div class="col-lg-4 soft_collam justify-content-end d-flex">
+                                        <div class="filter_button_area d-flex">
+                                            <div class="filter_button">
+                                                <button><i class="fa fa-sliders" aria-hidden="true"></i> Filter</button>
+                                            </div>
+                                            <div class="soft_position position-relative">
+                                                <button id="openPopupButton"><i class="fa fa-align-center" aria-hidden="true"></i> Soft</button>
+                                                <div id="popupdorsoft" class="popupdorsoft" style="display: none;">
+                                                    <form id="custom-form" action="/submit" method="post">
+                                                        <div class="custom-select">
+                                                            <div class="select-items">
+                                                                <div data-value="newest" class="selected">
+                                                                    <i class="fa fa-check" aria-hidden="true"></i> Newest
+                                                                </div>
+                                                                <div data-value="oldest">
+                                                                    <i class="fa fa-check" aria-hidden="true" style="display: none;"></i> Oldest
+                                                                </div>
+                                                                <div data-value="most-amount">
+                                                                    <i class="fa fa-check" aria-hidden="true" style="display: none;"></i> Most Amount
+                                                                </div>
+                                                                <div data-value="lowest-amount">
+                                                                    <i class="fa fa-check" aria-hidden="true" style="display: none;"></i> Lowest Amount
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" id="selected-option" name="selected-option" value="newest">
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>                            </div>
                           </nav>
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-jholok4" role="tabpanel" aria-labelledby="nav-jholok4-tab">
@@ -403,33 +408,216 @@
                                         </div>
 
                                         <!-- Mobile Table (Visible on mobile screens only) -->
-                                        <div class="mobile-table">
-                                            <div class="booking-details">
-                                                <span>Booking Details</span>
-                                                <span class="booking-status">Confirmed</span>
-                                            </div>
-                                            <div>
-                                                <div class="d-flex justify-content-around">
-                                                    <div class="table_row">
-                                                        <h3>8676</h3>
-                                                        <p>khjkj</p>
-                                                    </div>
-                                                    <div class="table_row">
-                                                        <h3>8676</h3>
-                                                        <p>khjkj</p>
-                                                    </div>
-                                                    <div class="table_row">
-                                                        <h3>8676</h3>
-                                                        <p>khjkj</p>
-                                                    </div>
+                                       <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">Booking Details</span>
+                                            <span class="upcoming_status"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between datetarik">
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
                                                 </div>
-                                                <table>
-                                                    <tr><td data-label="Confirmation Number">ABC123</td></tr>
-                                                    <tr><td data-label="Fees">$150</td></tr>
-                                                    <tr><td><button class="btn btn-primary btn-action">View</button></td></tr>
-                                                </table>
+                                                <div class="table_row text-center">
+                                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                                    <p>3 Nights</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus2">Confirmation Number</span>
+                                                <span class="titlestatus22">#2334444</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_delete_link w-100 text-center p-2 mt-2">Cencel</a>
                                             </div>
                                         </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">Booking Details</span>
+                                            <span class="upcoming_status"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between datetarik">
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                                    <p>3 Nights</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus2">Confirmation Number</span>
+                                                <span class="titlestatus22">#2334444</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_delete_link w-100 text-center p-2 mt-2">Cencel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">Booking Details</span>
+                                            <span class="upcoming_status"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between datetarik">
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                                    <p>3 Nights</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus2">Confirmation Number</span>
+                                                <span class="titlestatus22">#2334444</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_delete_link w-100 text-center p-2 mt-2">Cencel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">Booking Details</span>
+                                            <span class="upcoming_status"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between datetarik">
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                                    <p>3 Nights</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus2">Confirmation Number</span>
+                                                <span class="titlestatus22">#2334444</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_delete_link w-100 text-center p-2 mt-2">Cencel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">Booking Details</span>
+                                            <span class="upcoming_status"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between datetarik">
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                                    <p>3 Nights</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus2">Confirmation Number</span>
+                                                <span class="titlestatus22">#2334444</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_delete_link w-100 text-center p-2 mt-2">Cencel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">Booking Details</span>
+                                            <span class="upcoming_status"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between datetarik">
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                                    <p>3 Nights</p>
+                                                </div>
+                                                <div class="table_row text-center">
+                                                    <h3>5</h3>
+                                                    <p>Aug</p>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus2">Confirmation Number</span>
+                                                <span class="titlestatus22">#2334444</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_delete_link w-100 text-center p-2 mt-2">Cencel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
                                  <!-- =======Content End -->
                             </div>
                             <div class="tab-pane fade" id="nav-jholok3" role="tabpanel" aria-labelledby="nav-jholok3-tab">
@@ -454,6 +642,7 @@
     <!-- ========== Booking Status Area End == -->
     
     <!-- ========== Navbar END == -->
+    
     <!-- ========== Navbar END == -->
     <!-- ========== Design Code START == -->
      <!-- <img class="background_murk" src="images/design/background_effect.png" alt="bg"> -->
@@ -465,28 +654,23 @@
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     const openPopupButton = document.getElementById('openPopupButton');
     const popupdorsoft = document.getElementById('popupdorsoft');
-    const closePopupButton = document.getElementById('closePopupButton');
-
-    // Toggle popup visibility
-    openPopupButton.addEventListener('click', () => {
-        popupdorsoft.style.display = popupdorsoft.style.display === 'none' || popupdorsoft.style.display === '' ? 'block' : 'none';
-    });
-
-    closePopupButton.addEventListener('click', () => {
-        popupdorsoft.style.display = 'none';
-    });
-
     const selectItems = document.querySelector('.select-items');
     const hiddenInput = document.getElementById('selected-option');
     const form = document.getElementById('custom-form');
 
-    // Function to show/hide the dropdown items
-    function toggleDropdown() {
-        selectItems.style.display = selectItems.style.display === 'block' ? 'none' : 'block';
-    }
+    // Toggle popup visibility
+    openPopupButton.addEventListener('click', () => {
+        if (popupdorsoft.style.display === 'none' || popupdorsoft.style.display === '') {
+            popupdorsoft.style.display = 'block';
+            document.body.classList.add('no-scroll'); // Disable body scrolling
+        } else {
+            popupdorsoft.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Enable body scrolling
+        }
+    });
 
     // Event listener for dropdown item selection
     selectItems.addEventListener('click', function(event) {
@@ -494,34 +678,35 @@
         if (clickedItem) {
             // Remove the check icon from all items
             const items = selectItems.querySelectorAll('div');
-            items.forEach(item => item.classList.remove('selected'));
+            items.forEach(item => {
+                item.classList.remove('selected');
+                item.querySelector('i').style.display = 'none'; // Hide all check icons
+            });
 
             // Add the check icon to the selected item
             clickedItem.classList.add('selected');
+            clickedItem.querySelector('i').style.display = 'inline'; // Show the check icon
 
-            const selectedTextContent = clickedItem.textContent.trim();
-            
+            // Update the hidden input value
             hiddenInput.value = clickedItem.getAttribute('data-value');
-            selectItems.style.display = 'none';
-            form.submit(); // Submit the form
-        }
-    });
 
-    // Event listener to toggle dropdown visibility
-    document.querySelector('.custom-select').addEventListener('click', function(event) {
-        event.stopPropagation(); // Prevent click event from closing the dropdown
-        toggleDropdown();
+            // Hide the dropdown after selection
+            popupdorsoft.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Enable body scrolling after closing the popup
+
+            // Submit the form
+            form.submit();
+        }
     });
 
     // Close dropdown if clicked outside
     document.addEventListener('click', function(event) {
-        if (!event.target.closest('.custom-select')) {
-            selectItems.style.display = 'none';
+        if (!event.target.closest('.custom-select') && !event.target.closest('#openPopupButton')) {
+            popupdorsoft.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Enable body scrolling after closing the popup
         }
     });
 });
-
-
         // ?? For Table ========== 
 
     const totalRows = document.querySelectorAll('#booking-table-body tr').length;

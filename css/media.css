@@ -335,9 +335,13 @@
 .soft_position {
   position: unset !important;
 }
-#popupdorsoft {
+body{
+  position: relative !important;
+  height: 100vh !important;
+}
+.popupdorsoft {
 	/* display: none; */
-	position: fixed;
+	position: fixed !important;
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 4px;
@@ -345,12 +349,45 @@
 	box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 	z-index: 99;
 	left: 0px;
-	/* height: 400px; */
+	/* height: 100%; */
   /* top: 1; */
 	border-radius: 10px;
 	bottom: 0px !important;
+  
 }
 
+.booing_status h3 {
+	font-size: 20px;
+	margin-top: 16px;
+	margin-bottom: 8px;
+	line-height: 0px;
+}
+.booking_status_name p {
+	font-size: 14px;
+}
+.booking_status_card {
+	padding: 16px 16px;
+}
+.my_imgg_bg {
+	width: 32px;
+	height: 32px;
+	margin-left: -43px;
+}
+.my_imgg_bg img {
+	width: 16px;
+	height: 16px;
+	margin: 7px 0px 0px 8px;
+}
+.soft_collam{
+  justify-content: start !important;
+}
+.filter_button_area button{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.data_table {
+	margin-top: 16px;
+}
 
 }
 
@@ -427,6 +464,39 @@
   #infoIcon img{
     width: 100%;
   }
+  
+.booing_status h3 {
+	font-size: 20px;
+	margin-top: 16px;
+	margin-bottom: 8px;
+	line-height: 0px;
+}
+.booking_status_name p {
+	font-size: 14px;
+}
+.booking_status_card {
+	padding: 16px 16px;
+}
+.my_imgg_bg {
+	width: 32px;
+	height: 32px;
+	margin-left: -43px;
+}
+.my_imgg_bg img {
+	width: 16px;
+	height: 16px;
+	margin: 7px 0px 0px 8px;
+}
+.soft_collam{
+  justify-content: start !important;
+}
+.filter_button_area button{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.data_table {
+	margin-top: 16px;
+}
 }
 
 

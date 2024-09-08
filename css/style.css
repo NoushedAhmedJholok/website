@@ -1368,7 +1368,29 @@ line-height: 30px;
   background-color: #FF66001A;
   border-radius: 16px;
 }
+.pending_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #FF6600 !important;
+  padding: 4.5px 8px;
+  background-color: #FF66001A;
+  border-radius: 16px;
+}
 #booking-table-body .upcoming_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #2196F3 !important;
+  padding: 4.5px 8px;
+  background-color: #2196F31A;
+  border-radius: 16px;
+}
+.upcoming_status{
   font-family: Quicksand;
   font-size: 12px;
   font-weight: 500;
@@ -1390,7 +1412,29 @@ line-height: 30px;
   background-color: #4CAF501A;
   border-radius: 16px;
 }
+.completed_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #4CAF50 !important;
+  padding: 4.5px 8px;
+  background-color: #4CAF501A;
+  border-radius: 16px;
+}
 #booking-table-body .canceled_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #EF3A5D !important;
+  padding: 4.5px 8px;
+  background-color: #FDEBEF;
+  border-radius: 16px;
+}
+.canceled_status{
   font-family: Quicksand;
   font-size: 12px;
   font-weight: 500;
@@ -1412,6 +1456,29 @@ line-height: 30px;
   background-color: #FDEBEF;
   border-radius: 16px;
   text-decoration: none;
+}
+.tr_delete_link{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #EF3A5D !important;
+  padding: 4.5px 8px;
+  background-color: #FDEBEF;
+  border-radius: 16px;
+  text-decoration: none;
+}
+.upcoming_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #2196F3 !important;
+  padding: 4.5px 8px;
+  background-color: #2196F31A;
+  border-radius: 16px;
 }
 .show-entries{
   font-family: Quicksand;
@@ -1498,13 +1565,8 @@ line-height: 30px;
 .select-items .selected .fa-check {
   display: inline;
 }
-#popupdorsoft {
-	display: block;
-	/* position: absolute; */
-	width: 200px;
-  display: none;
-}
-#popupdorsoft {
+
+.popupdorsoft {
 	/* display: none; */
 	position: absolute;
 	background-color: #fff;
@@ -1518,7 +1580,7 @@ line-height: 30px;
 	border-radius: 10px;
 	right: 0;
 }
-.select-items div.active {
+.select-items div.selected {
 	padding: 10px;
 	border-bottom: 1px solid #dddddd00;
 	cursor: pointer;
@@ -1531,6 +1593,7 @@ line-height: 30px;
   line-height: 24px;
   letter-spacing: 0.5px;
   color: #2C1B5A;  
+  margin-left: 0px !important;
 }
 .select-items div {
 	padding: 10px;
@@ -1538,13 +1601,108 @@ line-height: 30px;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-  background-color: #ffffff;
+	background-color: #ffffff;
+	font-family: Quicksand;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	color: #2C1B5A;
+	padding-left: 35px;
+}
+.soft_collam{
+  text-align: end;
+}
+.filter_button_area button{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14.63px;
+  color: #4D308E;  
+  border-radius: 58px;
+  padding: 12px 20px;
+  background-color: #FFFFFF;
+  border: none;
+  margin-right: 6px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.filter_button_area button:hover{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14.63px;
+  color: #4D308E;  
+  border-radius: 58px;
+  padding: 12px 20px;
+  background-color: #EEEBF5;
+  border: none;
+  margin-right: 6px;
+}
+.data_table{
+  margin-top: 48px;
+}
+.booking-details .titlestatus{
   font-family: Quicksand;
-font-size: 14px;
-font-weight: 500;
-line-height: 24px;
-letter-spacing: 0.5px;
-  color: #2C1B5A;  
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;  
+}
+.mobile-table{
+  border-radius: 8px;
+  border: 1px solid #FCFCFD;
+  padding: 16px 16px;
+  background-color: #FFFFFF;
+}
+.datetarik{
+  margin-top: 21px;
+}
+.datetarik h3{
+  font-family: Quicksand;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: #4D308E;  
+  margin-bottom: 0px;
+}
+.datetarik i {
+	font-size: 16px;
+	background: #4D308E1A;
+	padding: 9px;
+	color: #4D308E;
+	border-radius: 100px;
+}
+.datetarik p {
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #878787;
+  margin-top: 4px;
+}
+.titlestatus2{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color:#878787;
+}
+.titlestatus22{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+  color:#878787;
+}
+.titlestatus2prize{
+  font-family: Quicksand;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.5px;
+  color: #4D308E;  
 }
 /* ========== Home Page Css End ==  */
 /* ========== Navbar Css End ==  */
