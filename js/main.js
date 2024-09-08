@@ -153,3 +153,6 @@ const today = new Date();
 
   generateCalendar(0, 'currentMonthBody1', 'currentMonthTitle1'); // Generate current month
   generateCalendar(1, 'currentMonthBody2', 'currentMonthTitle2'); // Generate next month
+
+
+

@@ -1212,8 +1212,341 @@ line-height: 30px;
   cursor: pointer;
   color: #2C1B5A;
 }
+.booing_status h3{
+  font-family: Quicksand;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+  color: #2C1B5A;
+  margin-top: 32px;
+}
+.booing_status .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+	color: #495057;
+	background-color: #ffffff00;
+	border-color: #dee2e6 #dee2e6 #fff;
+}
+.booking_status_card{
+  padding: 24px 32px;
+  margin-top: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+.booking_status_name h3{
+  font-family: Quicksand;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  text-align: left;
+  color: #2C1B5A; 
+  margin-top: 0px;
+  margin-bottom: 0px; 
+} 
+.booking_status_name p{
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+  color: #878787;   
+  margin-top: 0px;
+  margin-bottom: 0px; 
+} 
+.my_imgg_bg{
+  width: 72px;
+  height: 72px;
+  background-color: #EDEAF4;
+  border-radius: 100px;
+}
+.my_imgg_bg img {
+	width: 36px;
+	height: 36px;
+	margin: 18px 0px 0px 18px;
+}
 /* ========== Booking Css End ==  */
-/* ========== Navbar Css End ==  */
+/* ========== Home Page Css Start ==  */
+/* Hide mobile table by default (visible only in mobile screens) */
+.mobile-table {
+  display: none;
+}
+
+/* Desktop table visible on larger screens */
+.desktop-table th, .desktop-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Show mobile table only on screens less than 768px wide */
+@media (max-width: 767px) {
+  .desktop-table {
+      display: none;
+  }
+  .mobile_view_hidden{
+    display: none !important;
+  }
+
+  .mobile-table {
+      display: block;
+      border: 1px solid #ddd;
+      margin-bottom: 1rem;
+  }
+
+  .mobile-table td {
+      display: block;
+      text-align: left;
+      padding: 0.5rem;
+      position: relative;
+      border: none;
+  }
+
+  /* Add labels for each cell on mobile */
+  .mobile-table td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      margin-right: 10px;
+      display: inline-block;
+      width: 45%;
+  }
+
+  /* Mobile-specific adjustments for the first line and status */
+  .booking-details {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .btn-action {
+      width: 100%;
+  }
+}
+.table-responsive {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	margin-top: 16px;
+}
+.table-bordered > :not(caption) > * > * {
+	border-width: 0 0px;
+}
+.desktop-table {
+	background-color: #ffffff;
+	padding: 0px 0px;
+	border-radius: 8px;
+	margin-bottom: 100px;
+}
+.my_bg_color{
+  background-color: #EDEAF4;
+  border-radius: 12px 12px 0 0; 
+}
+.my_bg_color th{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.6px;
+  color: #2C1B5A; 
+  border-radius: 8px; 
+}
+
+.desktop-table table{
+  border-radius: 8px !important;
+
+}
+#booking-table-body td{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  color: #2C1B5A !important;  
+}
+#booking-table-body .pending_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #FF6600 !important;
+  padding: 4.5px 8px;
+  background-color: #FF66001A;
+  border-radius: 16px;
+}
+#booking-table-body .upcoming_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #2196F3 !important;
+  padding: 4.5px 8px;
+  background-color: #2196F31A;
+  border-radius: 16px;
+}
+#booking-table-body .completed_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #4CAF50 !important;
+  padding: 4.5px 8px;
+  background-color: #4CAF501A;
+  border-radius: 16px;
+}
+#booking-table-body .canceled_status{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #EF3A5D !important;
+  padding: 4.5px 8px;
+  background-color: #FDEBEF;
+  border-radius: 16px;
+}
+#booking-table-body .tr_delete_link{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #EF3A5D !important;
+  padding: 4.5px 8px;
+  background-color: #FDEBEF;
+  border-radius: 16px;
+  text-decoration: none;
+}
+.show-entries{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.5px;
+  letter-spacing: -0.02em;
+  color: #747E8A;  
+  padding-left: 1rem;
+
+}
+.form-select:focus {
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 0 0 0 rgba(13, 109, 253, 0);
+}
+.disabled .pagenet {
+  color: #AEB6BF;
+}
+.pagenet {
+	padding: 3px 20px;
+	color: #2C1B5A;
+	cursor: pointer;
+	font-size: 24px;
+}
+.page-link{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.5px;
+  letter-spacing: -0.02em;
+  color: #AEB6BF;  
+  border: none;
+  margin: 0px 3px;
+}
+.active .page-link{
+  
+}
+.page-item.active .page-link {
+	font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.5px;
+  letter-spacing: -0.02em;
+  color: #000000;  
+  border: 1px solid #EAECF0;
+  margin: 0px 3px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+#current-page{
+  font-size: 14px;
+}
+
+
+
+
+
+.custom-select {
+  display: inline-block;
+  width: 100%;
+}
+
+.select-items div {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.select-items div:hover {
+  background-color: #ddd;
+}
+.select-items .fa-check {
+  display: none;
+  color: green;
+  margin-right: 10px;
+}
+.select-items .active .fa-check{
+  display: initial;
+  color: #2C1B5A;
+  margin-right: 10px;
+}
+.select-items .selected .fa-check {
+  display: inline;
+}
+#popupdorsoft {
+	display: block;
+	/* position: absolute; */
+	width: 200px;
+  display: none;
+}
+#popupdorsoft {
+	/* display: none; */
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	/* border-radius: 4px; */
+	width: 200px;
+	box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+	z-index: 99;
+	/* left: -141%; */
+	/* top: -6px; */
+	border-radius: 10px;
+	right: 0;
+}
+.select-items div.active {
+	padding: 10px;
+	border-bottom: 1px solid #dddddd00;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+  background-color: #EEEBF5;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #2C1B5A;  
+}
+.select-items div {
+	padding: 10px;
+	border-bottom: 1px solid #dddddd00;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+  background-color: #ffffff;
+  font-family: Quicksand;
+font-size: 14px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0.5px;
+  color: #2C1B5A;  
+}
+/* ========== Home Page Css End ==  */
 /* ========== Navbar Css End ==  */
 /* ========== Design Css START ==  */
 

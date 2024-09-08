@@ -332,7 +332,24 @@
 	font-size: 12px;
 	padding: 12px 0px;
 }
-
+.soft_position {
+  position: unset !important;
+}
+#popupdorsoft {
+	/* display: none; */
+	position: fixed;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 100%;
+	box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+	z-index: 99;
+	left: 0px;
+	/* height: 400px; */
+  /* top: 1; */
+	border-radius: 10px;
+	bottom: 0px !important;
+}
 
 
 }

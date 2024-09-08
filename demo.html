@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Booking Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Hide mobile table by default (visible only in mobile screens) */
+        .mobile-table {
+            display: none;
+        }
+
+        /* Desktop table visible on larger screens */
+        .desktop-table th, .desktop-table td {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        /* Show mobile table only on screens less than 768px wide */
+        @media (max-width: 767px) {
+            .desktop-table {
+                display: none;
+            }
+
+            .mobile-table {
+                display: block;
+                border: 1px solid #ddd;
+                margin-bottom: 1rem;
+            }
+
+            .mobile-table td {
+                display: block;
+                text-align: left;
+                padding: 0.5rem;
+                position: relative;
+                border: none;
+            }
+
+            /* Add labels for each cell on mobile */
+            .mobile-table td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                margin-right: 10px;
+                display: inline-block;
+                width: 45%;
+            }
+
+            /* Mobile-specific adjustments for the first line and status */
+            .booking-details {
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .btn-action {
+                width: 100%;
+            }
+        }
+
+        /* Hide pagination and dropdown on mobile */
+        @media (max-width: 767px) {
+            .pagination, .show-entries {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-4">
+    <!-- Showing X from Y display with page selector -->
+    <div class="d-flex justify-content-between mb-2">
+        <div class="show-entries">
+            Showing page
+            <select id="current-page" class="form-select d-inline-block w-auto">
+                <!-- Page numbers will be populated by JavaScript -->
+            </select>
+            from <span id="total-pages"></span>
+        </div>
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="d-flex justify-content-end">
+            <ul class="pagination" id="pagination">
+                <!-- Pagination items will be populated by JavaScript -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Desktop Table (Visible on large screens) -->
+    <div class="table-responsive desktop-table">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>In Date</th>
+                    <th>Out Date</th>
+                    <th>Nights</th>
+                    <th>Confirmation Number</th>
+                    <th>Fees</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="booking-table-body">
+                <tr>
+                    <td>2024-09-07</td>
+                    <td>2024-09-10</td>
+                    <td>3</td>
+                    <td>ABC123</td>
+                    <td>$150</td>
+                    <td>Confirmed</td>
+                    <td><button class="btn btn-primary">View</button></td>
+                </tr>
+                <!-- Add more static rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Filter and Sort Form -->
+    <form method="GET" action="{{ route('bookings.index') }}" class="d-flex justify-content-between align-items-center mb-4">
+        <!-- Filter Button -->
+        <button type="button" class="btn btn-secondary" id="filter-button" onclick="toggleFilterOptions()">Filter</button>
+
+        <!-- Sort Button -->
+        <div class="d-flex align-items-center">
+            <label for="sort" class="me-2">Sort by:</label>
+            <select id="sort" name="sort" class="form-select w-auto me-2">
+                <option value="date_asc">Date Ascending</option>
+                <option value="date_desc">Date Descending</option>
+                <option value="nights_asc">Nights Ascending</option>
+                <option value="nights_desc">Nights Descending</option>
+                <!-- Add more sorting options here -->
+            </select>
+            <button type="submit" class="btn btn-primary">Sort</button>
+        </div>
+    </form>
+
+    <!-- Mobile Table (Visible on mobile screens only) -->
+    <div class="mobile-table">
+        <div class="booking-details">
+            <span>Booking Details</span>
+            <span class="booking-status">Confirmed</span>
+        </div>
+        <div>
+            <div class="d-flex justify-content-around">
+                <div class="table_row">
+                    <h3>8676</h3>
+                    <p>khjkj</p>
+                </div>
+                <div class="table_row">
+                    <h3>8676</h3>
+                    <p>khjkj</p>
+                </div>
+                <div class="table_row">
+                    <h3>8676</h3>
+                    <p>khjkj</p>
+                </div>
+            </div>
+            <table>
+                <tr><td data-label="Confirmation Number">ABC123</td></tr>
+                <tr><td data-label="Fees">$150</td></tr>
+                <tr><td><button class="btn btn-primary btn-action">View</button></td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const totalRows = document.querySelectorAll('#booking-table-body tr').length;
+    let currentPage = 1;
+    const rowsPerPage = 10; // Fixed number of rows per page
+    const visiblePages = 4; // Number of page numbers to show around current page
+    const totalPages = Math.ceil(totalRows / rowsPerPage);
+
+    function paginate(rowsPerPage, currentPage) {
+        const start = (currentPage - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        const rows = document.querySelectorAll('#booking-table-body tr');
+        rows.forEach((row, index) => {
+            row.style.display = (index >= start && index < end) ? '' : 'none';
+        });
+
+        // Update total pages display
+        document.getElementById('total-pages').innerText = totalPages;
+    }
+
+    function populatePageSelector() {
+        const pageSelector = document.getElementById('current-page');
+        pageSelector.innerHTML = ''; // Clear existing options
+
+        for (let i = 1; i <= totalPages; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.textContent = i;
+            if (i === currentPage) {
+                option.selected = true;
+            }
+            pageSelector.appendChild(option);
+        }
+
+        // Event listener for page selection
+        pageSelector.addEventListener('change', function() {
+            currentPage = parseInt(this.value);
+            paginate(rowsPerPage, currentPage);
+            displayPagination();
+        });
+    }
+
+    function displayPagination() {
+        const pagination = document.getElementById('pagination');
+        pagination.innerHTML = '';
+
+        // Add Previous button
+        const prevDisabled = currentPage === 1 ? 'disabled' : '';
+        pagination.insertAdjacentHTML('beforeend', `
+            <li class="page-item ${prevDisabled}">
+                <button class="page-link" id="prev-page">Previous</button>
+            </li>
+        `);
+
+        // Define start and end page range around current page
+        let startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
+        let endPage = Math.min(totalPages, startPage + visiblePages - 1);
+
+        // Adjust start and end if near limits
+        if (endPage - startPage < visiblePages - 1) {
+            startPage = Math.max(1, endPage - visiblePages + 1);
+        }
+
+        // Create the page number buttons
+        for (let i = startPage; i <= endPage; i++) {
+            const activeClass = i === currentPage ? 'active' : '';
+            pagination.insertAdjacentHTML('beforeend', `
+                <li class="page-item ${activeClass}">
+                    <button class="page-link" data-page="${i}">${i}</button>
+                </li>
+            `);
+        }
+
+        // Add Next button
+        const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+        pagination.insertAdjacentHTML('beforeend', `
+            <li class="page-item ${nextDisabled}">
+                <button class="page-link" id="next-page">Next</button>
+            </li>
+        `);
+
+        // Add event listeners for page buttons
+        document.querySelectorAll('.page-link[data-page]').forEach(link => {
+            link.addEventListener('click', function() {
+                currentPage = parseInt(this.getAttribute('data-page'));
+                paginate(rowsPerPage, currentPage);
+                displayPagination();
+            });
+        });
+
+        // Event listener for Previous button
+        document.getElementById('prev-page').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                paginate(rowsPerPage, currentPage);
+                displayPagination();
+            }
+        });
+
+        // Event listener for Next button
+        document.getElementById('next-page').addEventListener('click', function() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                paginate(rowsPerPage, currentPage);
+                displayPagination();
+            }
+        });
+    }
+
+    // Initialize table and pagination
+    paginate(rowsPerPage, currentPage);
+    populatePageSelector();
+    displayPagination();
+</script>
+</body>
+</html>
