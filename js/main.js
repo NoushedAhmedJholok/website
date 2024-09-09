@@ -1,3 +1,179 @@
+document.getElementById('filter-btn').addEventListener('click', function () {
+  var form = document.getElementById('mainForm');
+  if (form.style.display === 'none' || form.style.display === '') {
+      form.style.display = 'block'; // Show the form
+  } else {
+      form.style.display = 'none';  // Hide the form
+  }
+});
+
+const minRange = document.getElementById('min-range');
+const maxRange = document.getElementById('max-range');
+const minAmount = document.getElementById('min-amount');
+const maxAmount = document.getElementById('max-amount');
+const minValueLabel = document.getElementById('min-value');
+const maxValueLabel = document.getElementById('max-value');
+
+// Update sliders and labels when dragged
+minRange.addEventListener('input', updateFromSlider);
+maxRange.addEventListener('input', updateFromSlider);
+
+// Update the slider values when manually entered in the number input fields
+minAmount.addEventListener('input', updateFromInput);
+maxAmount.addEventListener('input', updateFromInput);
+
+function updateFromSlider() {
+    const minValue = parseInt(minRange.value);
+    const maxValue = parseInt(maxRange.value);
+
+    // Update the number input fields with the slider values
+    minAmount.value = minValue;
+    minValueLabel.innerText = `${minValue}`;
+
+    maxAmount.value = maxValue;
+    maxValueLabel.innerText = `${maxValue}`;
+
+    // Ensure that minRange cannot exceed maxRange
+    if (minValue >= maxValue) {
+        minRange.value = maxValue - 1;
+        minAmount.value = minRange.value;
+        minValueLabel.innerText = `${minRange.value}`;
+    }
+
+    // Ensure that maxRange cannot be less than minRange
+    if (maxValue <= minValue) {
+        maxRange.value = minValue + 1;
+        maxAmount.value = maxRange.value;
+        maxValueLabel.innerText = `${maxRange.value}`;
+    }
+}
+
+function updateFromInput() {
+    let minValue = parseInt(minAmount.value);
+    let maxValue = parseInt(maxAmount.value);
+
+    // Ensure the minimum value does not exceed the maximum
+    if (minValue >= maxValue) {
+        minValue = maxValue - 1;
+        minAmount.value = minValue;
+    }
+
+    // Update the sliders
+    minRange.value = minValue;
+    maxRange.value = maxValue;
+    updateFromSlider();
+}
+
+// ++++++ range END 
+// ========= calander start
+document.addEventListener('DOMContentLoaded', function () {
+  const dateInput = document.getElementById('date-input');
+  const calendarPopup = document.getElementById('calendar-popup');
+  const calendar = document.getElementById('calendar');
+  const monthNameEl = document.getElementById('month-name');
+  const prevMonthIcon = document.getElementById('prev-month');
+  const nextMonthIcon = document.getElementById('next-month');
+
+  let currentDate = new Date();
+  let currentMonth = currentDate.getMonth();
+  let currentYear = currentDate.getFullYear();
+
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  // Function to update the calendar header with the current month and year
+  function updateMonthName() {
+    monthNameEl.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+  }
+
+  // Create a basic calendar
+  function createCalendar(month, year) {
+    calendar.innerHTML = '';
+    const firstDay = new Date(year, month).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+    // Display the days of the week
+    const headerRow = document.createElement('div');
+    headerRow.style.display = 'flex';
+    daysOfWeek.forEach(day => {
+      const dayElement = document.createElement('div');
+      dayElement.style.flex = '1';
+      dayElement.style.textAlign = 'center';
+      dayElement.textContent = day;
+      calendar.appendChild(dayElement);
+    });
+
+    // Add empty slots for days before the first day
+    for (let i = 0; i < firstDay; i++) {
+      const emptyCell = document.createElement('div');
+      calendar.appendChild(emptyCell);
+    }
+
+    // Display the days of the month
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dayCell = document.createElement('div');
+      dayCell.textContent = day;
+      dayCell.classList.add('day-cell');
+      dayCell.addEventListener('click', () => {
+        dateInput.value = `${day}-${month + 1}-${year}`;
+        calendarPopup.classList.add('hidden');
+      });
+      calendar.appendChild(dayCell);
+    }
+  }
+
+  // Initialize the calendar with the current month
+  function initializeCalendar() {
+    createCalendar(currentMonth, currentYear);
+    updateMonthName();
+  }
+
+  // Event to toggle the calendar popup visibility
+  dateInput.addEventListener('click', function () {
+    calendarPopup.classList.toggle('hidden');
+    if (!calendarPopup.classList.contains('hidden')) {
+      initializeCalendar();
+    }
+  });
+
+  // Navigation for the previous and next month
+  prevMonthIcon.addEventListener('click', function () {
+    currentMonth--;
+    if (currentMonth < 0) {
+      currentMonth = 11;
+      currentYear--;
+    }
+    createCalendar(currentMonth, currentYear);
+    updateMonthName();
+  });
+
+  nextMonthIcon.addEventListener('click', function () {
+    currentMonth++;
+    if (currentMonth > 11) {
+      currentMonth = 0;
+      currentYear++;
+    }
+    createCalendar(currentMonth, currentYear);
+    updateMonthName();
+  });
+
+  // Hide popup when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!document.querySelector('.date-picker-wrapper').contains(e.target) && !calendarPopup.contains(e.target)) {
+      calendarPopup.classList.add('hidden');
+    }
+  });
+}); 
+// ========= calander End
+
+
+
+
+
+
 const today = new Date();
   let currentMonthOffset = 0;
   let selectedStartDate = null;
@@ -156,3 +332,166 @@ const today = new Date();
 
 
 
+  var app = new Vue({
+    name: 'Vue Price Range',
+    el: '#app',
+    data: {
+      
+       min: 10,
+        max: 210,
+        minValue: 40,
+        maxValue: 150,
+        step: 5,
+        totalSteps: 0,
+        percentPerStep: 1,
+        trackWidth: null,
+        isDragging: false,
+        pos: {
+          curTrack: null
+        }
+      
+    },
+  
+    methods: {
+      moveTrack(track, ev){
+        
+        let percentInPx = this.getPercentInPx();
+        
+        let trackX = Math.round(this.$refs._vpcTrack.getBoundingClientRect().left);
+        let clientX = ev.clientX;
+        let moveDiff = clientX-trackX;
+  
+        let moveInPct = moveDiff / percentInPx
+        // console.log(moveInPct)
+  
+        if(moveInPct<1 || moveInPct>100) return;
+        let value = ( Math.round(moveInPct / this.percentPerStep) * this.step ) + this.min;
+        if(track==='track1'){
+          if(value >= (this.maxValue - this.step)) return;
+          this.minValue = value;
+        }
+  
+        if(track==='track2'){
+          if(value <= (this.minValue + this.step)) return;
+          this.maxValue = value;
+        }
+        
+        this.$refs[track].style.left = moveInPct + '%';
+        this.setTrackHightlight()
+              
+      },
+      mousedown(ev, track){
+  
+        if(this.isDragging) return;
+        this.isDragging = true;
+        this.pos.curTrack = track;
+      },
+  
+      touchstart(ev, track){
+        this.mousedown(ev, track)
+      },
+  
+      mouseup(ev, track){
+        if(!this.isDragging) return;
+        this.isDragging = false
+      },
+  
+      touchend(ev, track){
+        this.mouseup(ev, track)
+      },
+  
+      mousemove(ev, track){
+        if(!this.isDragging) return;      
+        this.moveTrack(track, ev)
+      },
+  
+      touchmove(ev, track){
+        this.mousemove(ev.changedTouches[0], track)
+      },
+  
+      valueToPercent(value){
+        return ((value - this.min) / this.step) * this.percentPerStep
+      },
+  
+      setTrackHightlight(){
+        this.$refs.trackHighlight.style.left = this.valueToPercent(this.minValue) + '%'
+        this.$refs.trackHighlight.style.width = (this.valueToPercent(this.maxValue) - this.valueToPercent(this.minValue)) + '%'
+      },
+  
+      getPercentInPx(){
+        let trackWidth = this.$refs._vpcTrack.offsetWidth;
+        let oneStepInPx = trackWidth / this.totalSteps;
+        // 1 percent in px
+        let percentInPx = oneStepInPx / this.percentPerStep;
+        
+        return percentInPx;
+      },
+  
+      setClickMove(ev){
+        let track1Left = this.$refs.track1.getBoundingClientRect().left;
+        let track2Left = this.$refs.track2.getBoundingClientRect().left;
+        // console.log('track1Left', track1Left)
+        if(ev.clientX < track1Left){
+          this.moveTrack('track1', ev)
+        }else if((ev.clientX - track1Left) < (track2Left - ev.clientX) ){
+          this.moveTrack('track1', ev)
+        }else{
+          this.moveTrack('track2', ev)
+        }
+      }
+    },
+  
+    mounted() {
+      // calc per step value
+      this.totalSteps = (this.max - this.min) / this.step;
+  
+      // percent the track button to be moved on each step
+      this.percentPerStep = 100 / this.totalSteps;
+      // console.log('percentPerStep', this.percentPerStep)
+  
+      // set track1 initilal
+      document.querySelector('.track1').style.left = this.valueToPercent(this.minValue) + '%'
+      // track2 initial position
+      document.querySelector('.track2').style.left = this.valueToPercent(this.maxValue) + '%'
+      // set initila track highlight
+      this.setTrackHightlight()
+  
+      var self = this;
+  
+      ['mouseup', 'mousemove'].forEach( type => {
+        document.body.addEventListener(type, (ev) => {
+          // ev.preventDefault();
+          if(self.isDragging && self.pos.curTrack){
+            self[type](ev, self.pos.curTrack)
+          }
+        })
+      });
+  
+      ['mousedown', 'mouseup', 'mousemove', 'touchstart', 'touchmove', 'touchend'].forEach( type => {
+        document.querySelector('.track1').addEventListener(type, (ev) => {
+          ev.stopPropagation();
+          self[type](ev, 'track1')
+        })
+  
+        document.querySelector('.track2').addEventListener(type, (ev) => {
+          ev.stopPropagation();
+          self[type](ev, 'track2')
+        })
+      })
+  
+      // on track clik
+      // determine direction based on click proximity
+      // determine percent to move based on track.clientX - click.clientX
+      document.querySelector('.track').addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        self.setClickMove(ev)
+        
+      })
+  
+      document.querySelector('.track-highlight').addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        self.setClickMove(ev)
+        
+      })
+    }
+  })

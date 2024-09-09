@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request To Book</title>
+    <!-- ========== All Css Link Here  -->
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/slick.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <!-- ========== Navbar START == -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container navbar_area d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
+          <div class="d-flex align-items-center d-lg-none">
+            <!-- <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+
+            <img src="images/person/person.png" alt="img">
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bookings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Invoices</a>
+              </li>
+            </ul> -->
+          </div>
+          <div class="d-none d-lg-flex align-items-center">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <img src="images/person/person.png" alt="img">
+          </div>
+        </div>
+      </nav>
+      
+    <!-- ========== Navbar END == -->
+    <!-- ========== Banner Area START == -->
+   <section id="request_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6">
+                <div class="request_info">
+                    <div class="d-flex">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <h3>Why do you need to cancel?</h3>
+                    </div>
+                    <form id="selection-form">
+                        <div>
+                            <input type="radio" id="option1" name="selection" value="Option 1" required>
+                            <label for="option1" class="w-100">
+                                <div class="selectable-div">
+                                    <div class="info_secect_box">
+                                        <h3>Change dates</h3>
+                                        <p>I need to adjust my booking dates because I have a new appointment at the same time.</p>
+                                    </div>
+                                    <span class="checkmark">✔</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option2" name="selection" value="Option 2">
+                            <label for="option2">
+                                <div class="selectable-div">
+                                    <div class="info_secect_box">
+                                        <h3>I changed my mind</h3>
+                                        <p>I'm canceling because I've chosen to take a different path,
+                                            but I might return in the future.</p>
+                                    </div>
+                                    <span class="checkmark">✔</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option3" name="selection" value="Option 3">
+                            <label for="option3" class="w-100">
+                                <div class="selectable-div">
+                                    <div class="info_secect_box">
+                                        <h3>Something Occurred </h3>
+                                        <p>I have to cancel my booking due to an unexpected event
+                                            that has come up.</p>
+                                    </div>
+                                    <span class="checkmark">✔</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option4" name="selection" value="Option 4">
+                            <label for="option4" class="w-100">
+                                <div class="selectable-div">
+                                    <div class="info_secect_box w-100">
+                                        <h3>Other </h3>
+                                        <p>Please provide the reason for your cancellation.</p>
+                                        <input type="text" placeholder="Type here....">
+                                    </div>
+                                    <span class="checkmark">✔</span>
+                                </div>
+                            </label>
+                            
+                <div class="my_line"></div>
+                <div class="call_center">
+                    <div class="d-flex">
+                        <img src="images/icons/call-center.svg" alt="icon">
+                        <div class="call_center_text">
+                            <h3>Cancellation confirmation call</h3>
+                            <p>A customer support agent will call you to confirm your cancellation <span>within</span> the next <span>two working days.</span></p>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                    <div class="card_request_book">
+                        <div class="box_area d-flex justify-content-between">
+                            <div class="d-flex">
+                                <div class="img_bg">
+                                    <img src="images/icons/Blank-Calendar.svg" alt="icons">
+                                </div>
+                                <div class="box_area_text">
+                                    <h4>From Wed to Sun</h4>
+                                    <h3 class="mt-0">02 Dec - 04 Dec</h3>
+                                    <p>2 Nights • #234324</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex your_pay_mode">
+                            <p>Your payment will be made by</p>
+                            <img src="images/icons/paymob.png" alt="img">
+                        </div>
+                        <div class="my_line"></div>
+                        <h3>Price details</h3>
+                        <div class="d-flex justify-content-between">
+                            <p>500 x 3 nights</p>
+                            <span>2,500 EGP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Cleaning fees</p>
+                            <span>200 EGP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Service fees</p>
+                            <span>0 EGP</span>
+                        </div>
+                        <div class="my_line"></div>
+                        <div class="d-flex justify-content-between">
+                            <p class="t_prize_text">Total (EGP)</p>
+                            <span class="t_prize">2,700 EGP</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="pay_button_mobile">
+                                <p>Total (EGP)</p>
+                                <span>2,700 EGP</span>
+                            </div>
+                            <button type="submit"> Pay with Paymob</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+   </section>
+    <!-- ========== Banner Area END == -->
+  
+    <!-- ========== All JS Link Here  -->
+  
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

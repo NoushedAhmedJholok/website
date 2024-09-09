@@ -389,6 +389,27 @@ body{
 	margin-top: 16px;
 }
 
+
+
+#mainForm {
+	
+	position: fixed !important;
+	bottom: 0px;
+	left: 0px;
+  width: 100%;
+}
+.card {
+	position: fixed !important;
+	bottom: 0;
+}
+.calendar-popup {
+	position: fixed !important;
+	/* top: 0px; */
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+}
+
 }
 
 
@@ -497,6 +518,29 @@ body{
 .data_table {
 	margin-top: 16px;
 }
+#mainForm {
+	
+	position: fixed !important;
+	bottom: 0px;
+	left: 0px;
+  width: 100%;
+}
+.card {
+	position: fixed !important;
+	bottom: 0;
+}
+.calendar-popup {
+	position: fixed !important;
+	/* top: 0px; */
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+  z-index: 99999999999 !important;
+}
+
+
+
+
 }
 
 
