@@ -509,7 +509,9 @@ div[data-date="2024-9-11"] .tarik_p::after, div[data-date="2024-10-12"] .tarik_p
 .calendar-body div {
 	height: 32px !important;
 }
-
+.request_info {
+	padding-right: 0px;
+}
 
 
 }
