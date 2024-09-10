@@ -110,7 +110,18 @@ let currentMonthOffset = 0;
 let selectedStartDate = null;
 let selectedEndDate = null;
 
-// Example date handling function
+// Example icon configuration
+const dateIcons = {
+  '2024-09-05': 'icon-down',
+  '2024-09-06': 'icon-down',
+  '2024-09-07': 'icon-down',
+  '2024-09-08': 'icon-down',
+  '2024-09-09': 'icon-down',
+  '2024-09-10': 'icon-down',
+  '2024-09-15': 'icon-up',
+  '2024-09-20': 'icon-up'
+};
+
 function generateCalendar(monthOffset, elementId, titleId) {
   const date = new Date(today.getFullYear(), today.getMonth() + monthOffset, 1);
   const month = date.getMonth();
@@ -158,7 +169,17 @@ function generateCalendar(monthOffset, elementId, titleId) {
       });
     }
 
-    // Append the dayDiv to the calendarBody
+    // Add icon or no-icon class
+    const iconDiv = document.createElement('div');
+    iconDiv.classList.add('icondate');
+    const iconType = dateIcons[dayDiv.dataset.date];
+    if (iconType) {
+      iconDiv.classList.add(iconType);
+      dayDiv.classList.add('icon-date');
+    } else {
+      dayDiv.classList.add('no-icon');
+    }
+    dayDiv.appendChild(iconDiv);
     calendarBody.appendChild(dayDiv);
   }
 
@@ -186,26 +207,25 @@ function handleDateSelection(date) {
   displayBookingInfo();
   updateFormFields();
 }
+
 function updateCalendar() {
   document.querySelectorAll('.calendar-body div').forEach(div => {
     const divDate = new Date(div.dataset.date);
     if (divDate) {
       if (divDate.getTime() === selectedStartDate?.getTime()) {
-        div.classList.add('selected-start');
-        div.classList.remove('selected-end', 'selected-range');
+        div.classList.add('selected-start-start');
+        div.classList.remove('selected-range');
       } else if (divDate.getTime() === selectedEndDate?.getTime()) {
-        div.classList.add('selected-end');
-        div.classList.remove('selected-start', 'selected-range');
+        div.classList.add('selected-start-end');
+        div.classList.remove('selected-range');
       } else if (selectedStartDate && selectedEndDate && divDate > selectedStartDate && divDate < selectedEndDate) {
         div.classList.add('selected-range');
-        div.classList.remove('selected-start', 'selected-end');
       } else {
-        div.classList.remove('selected-start', 'selected-end', 'selected-range');
+        div.classList.remove('selected-start-end', 'selected-range', 'selected-start-start');
       }
     }
   });
 }
-
 
 function displayBookingInfo() {
   const infoDiv = document.getElementById('bookingInfo');
@@ -247,50 +267,26 @@ document.getElementById('nextMonth').addEventListener('click', function() {
 generateCalendar(0, 'currentMonthBody1', 'currentMonthTitle1'); // Generate current month
 generateCalendar(1, 'currentMonthBody2', 'currentMonthTitle2'); // Generate next month
 
+// Menu Toggle Functionality
+document.querySelector('.manu_profile_m').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
 
+document.querySelector('.manu_profile').addEventListener('click', function(event) {
+  event.stopPropagation();  // Prevents the click from propagating up
+  this.classList.toggle('active');
+});
 
+// Close button to remove 'active' class
+document.querySelector('.close-btn').addEventListener('click', function(event) {
+  event.stopPropagation();  // Prevents bubbling to the .manu_profile click event
+  document.querySelector('.manu_profile').classList.remove('active');
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    // Toggle menu for .manu_profile_m
-    document.querySelector('.manu_profile_m').addEventListener('click', function() {
-      this.classList.toggle('active');
-    });
-    
-    // Toggle menu for .manu_profile
-    document.querySelector('.manu_profile').addEventListener('click', function(event) {
-      event.stopPropagation();  // Prevents the click from propagating up
-      this.classList.toggle('active');
-    });
-    
-    // Close button to remove 'active' class
-    document.querySelector('.close-btn').addEventListener('click', function(event) {
-      event.stopPropagation();  // Prevents bubbling to the .manu_profile click event
-      document.querySelector('.manu_profile').classList.remove('active');
-    });
-    
-    // Optional: Add a click listener to the document to close the menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const profileMenu = document.querySelector('.manu_profile');
-      if (!profileMenu.contains(event.target)) {
-        profileMenu.classList.remove('active');
-      }
-    });
-  
+// Optional: Add a click listener to the document to close the menu when clicking outside
+document.addEventListener('click', function(event) {
+  const profileMenu = document.querySelector('.manu_profile');
+  if (!profileMenu.contains(event.target)) {
+    profileMenu.classList.remove('active');
+  }
+});

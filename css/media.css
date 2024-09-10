@@ -500,6 +500,18 @@ div[data-date="2024-9-11"] .tarik_p::after, div[data-date="2024-10-12"] .tarik_p
 	margin: -2px auto 0 !important;
 	clip-path: polygon(49% 1%, 0% 100%, 100% 100%);
 }
+.selected-start-start {
+  height: 32px !important;
+}
+.selected-start-end {
+  width: 32px !important;
+}
+.calendar-body div {
+	height: 32px !important;
+}
+
+
+
 }
 
 

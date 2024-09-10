@@ -274,12 +274,12 @@ button, a{
     position: relative;
     background-color: #ffffff;
   }
-  .selected-start .tarik_p{
+  .selected-start-start .tarik_p{
     background-color: #4D308E;
     color: #fff;
     border-radius: 100px !important;
   }
-  .selected-end .tarik_p{
+  .selected-start-end .tarik_p{
     background-color: #4D308E !important;
     color: #fff;
     border-radius: 100px !important;
@@ -323,12 +323,12 @@ button, a{
     color: #fff;
     border-radius: 0px !important;
   }
-  .selected-start {
+  .selected-start-start {
     background-color: #4e308e1f;
     border-top-left-radius: 100px !important;
     border-bottom-left-radius: 100px !important;
   }
-  .selected-end {
+  .selected-start-end {
     background-color: #4e308e1f;
     border-top-right-radius: 100px !important;
     border-bottom-right-radius: 100px !important;
@@ -374,8 +374,8 @@ button, a{
     line-height: 22.5px;
     text-align: center;
     color: #313131;
-    /* width: 56px !important;
-    height: 56px; */
+    /* width: 56px !important; */
+    height: 56px !important;
     /* margin-left: 15px; */
     text-align: center;
 
@@ -2415,6 +2415,8 @@ text-decoration: none;
   background-color: #4D308E1A !important;
   color: #4D308E !important;
 }
+
+
 /*--- /.price-range-slider ---*/
 /* ========== Home Page Css End ==  */
 /* ========== Navbar Css End ==  */
