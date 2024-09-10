@@ -18,30 +18,41 @@
           <a class="navbar-brand" href="#">
             <img src="images/logo.png" alt="logo">
           </a>
-          <div class="d-flex align-items-center d-lg-none">
+          <div class="d-flex align-items-center d-lg-none manu_profile position-relative">
             <!-- <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button> -->
             <i class="fa fa-bars" aria-hidden="true"></i>
 
             <img src="images/person/person.png" alt="img">
+            <div class="mabile_desk_profile_manu">
+                <div class="d-flex justify-content-between manu_logo">
+                    <img src="images/logo.png" alt="logo">
+                    <i class="fa fa-times"></i>
+                </div>
+                <ul>
+                   
+                    <li><a href="#">Profile Details</a></li>
+                    <li class=""><a href="#">Settings</a></li>
+                    <div class="my_line"></div>
+                    <li><a href="#" class="logout">Log out</a></li>
+                    
+                </ul>
+            </div>
           </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Bookings</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Invoices</a>
-              </li>
-            </ul> -->
+            
           </div>
-          <div class="d-none d-lg-flex align-items-center">
+          <div class="d-none d-lg-flex align-items-center position-relative manu_profile_m">
             <i class="fa fa-bars" aria-hidden="true"></i>
             <img src="images/person/person.png" alt="img">
+            <div class="mabile_desk_profile_manu">
+                <ul>
+                    <li><a href="#">Profile Details</a></li>
+                    <li class="centerr"><a href="#">Settings</a></li>
+                    <li><a href="#" class="logout">Log out</a></li>
+                </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -135,7 +146,7 @@
                             <p class="t_prize_text">Total (EGP)</p>
                             <span class="t_prize">2,700 EGP</span>
                         </div>
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between mobile_bottom_fix">
                             <div class="pay_button_mobile">
                                 <p>Total (EGP)</p>
                                 <span>2,700 EGP</span>
@@ -157,5 +168,32 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        
+        // Menu Toggle Functionality
+        document.querySelector('.manu_profile_m').addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+        
+        document.querySelector('.manu_profile').addEventListener('click', function(event) {
+          event.stopPropagation();  // Prevents the click from propagating up
+          this.classList.toggle('active');
+        });
+        
+        // Close button to remove 'active' class
+        document.querySelector('.close-btn').addEventListener('click', function(event) {
+          event.stopPropagation();  // Prevents bubbling to the .manu_profile click event
+          document.querySelector('.manu_profile').classList.remove('active');
+        });
+        
+        // Optional: Add a click listener to the document to close the menu when clicking outside
+        document.addEventListener('click', function(event) {
+          const profileMenu = document.querySelector('.manu_profile');
+          if (!profileMenu.contains(event.target)) {
+            profileMenu.classList.remove('active');
+          }
+        });
+        
+            </script>
 </body>
 </html>
