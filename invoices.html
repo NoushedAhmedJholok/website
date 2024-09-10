@@ -303,11 +303,12 @@
                                                                 <label for="max-range" id="max-value">900</label>
                                                             </div>
                                                             <div class="slider-range">
+                                                                <div class="track"></div> <!-- Slider track -->
                                                                 <input type="range" id="min-range" min="0" max="1000" value="100">
                                                                 <input type="range" id="max-range" min="0" max="1000" value="900">
                                                             </div>
-                                                            
                                                         </div>
+                                                        
                                                         <div class="manual-inputs d-flex justify-content-between">
                                                             <div class="first_input text-start">
                                                                 <label for="min-amount">Min Amount: </label>
@@ -1962,68 +1963,6 @@ document.querySelectorAll('.table-responsive').forEach(tableContainer => {
     displayPagination(table, rowsPerPage, currentPage);
 });
 
-
-
-
-
-
-
-const minRange = document.getElementById('min-range');
-const maxRange = document.getElementById('max-range');
-const minAmount = document.getElementById('min-amount');
-const maxAmount = document.getElementById('max-amount');
-const minValueLabel = document.getElementById('min-value');
-const maxValueLabel = document.getElementById('max-value');
-
-// Update sliders and labels when dragged
-minRange.addEventListener('input', updateFromSlider);
-maxRange.addEventListener('input', updateFromSlider);
-
-// Update the slider values when manually entered in the number input fields
-minAmount.addEventListener('input', updateFromInput);
-maxAmount.addEventListener('input', updateFromInput);
-
-function updateFromSlider() {
-    const minValue = parseInt(minRange.value);
-    const maxValue = parseInt(maxRange.value);
-
-    // Update the number input fields with the slider values
-    minAmount.value = minValue;
-    minValueLabel.innerText = `${minValue}`;
-
-    maxAmount.value = maxValue;
-    maxValueLabel.innerText = `${maxValue}`;
-
-    // Ensure that minRange cannot exceed maxRange
-    if (minValue >= maxValue) {
-        minRange.value = maxValue - 1;
-        minAmount.value = minRange.value;
-        minValueLabel.innerText = `${minRange.value}`;
-    }
-
-    // Ensure that maxRange cannot be less than minRange
-    if (maxValue <= minValue) {
-        maxRange.value = minValue + 1;
-        maxAmount.value = maxRange.value;
-        maxValueLabel.innerText = `${maxRange.value}`;
-    }
-}
-
-function updateFromInput() {
-    let minValue = parseInt(minAmount.value);
-    let maxValue = parseInt(maxAmount.value);
-
-    // Ensure the minimum value does not exceed the maximum
-    if (minValue >= maxValue) {
-        minValue = maxValue - 1;
-        minAmount.value = minValue;
-    }
-
-    // Update the sliders
-    minRange.value = minValue;
-    maxRange.value = maxValue;
-    updateFromSlider();
-}
 document.getElementById('filter-btn').addEventListener('click', function () {
   var form = document.getElementById('mainForm');
   if (form.style.display === 'none' || form.style.display === '') {
@@ -2032,6 +1971,53 @@ document.getElementById('filter-btn').addEventListener('click', function () {
       form.style.display = 'none';  // Hide the form
   }
 });
+
+
+const minSlider = document.getElementById('min-range');
+const maxSlider = document.getElementById('max-range');
+const minAmountInput = document.getElementById('min-amount');
+const maxAmountInput = document.getElementById('max-amount');
+const minValueLabel = document.getElementById('min-value');
+const maxValueLabel = document.getElementById('max-value');
+
+// Sync the min slider with the input and display value
+minSlider.addEventListener('input', function () {
+  if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
+    minSlider.value = maxSlider.value; // Prevent overlap
+  }
+  minAmountInput.value = minSlider.value;
+  minValueLabel.textContent = minSlider.value;
+});
+
+// Sync the max slider with the input and display value
+maxSlider.addEventListener('input', function () {
+  if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
+    maxSlider.value = minSlider.value; // Prevent overlap
+  }
+  maxAmountInput.value = maxSlider.value;
+  maxValueLabel.textContent = maxSlider.value;
+});
+
+// Sync the min amount input with the slider and display value
+minAmountInput.addEventListener('input', function () {
+  if (parseInt(minAmountInput.value) > parseInt(maxSlider.value)) {
+    minAmountInput.value = maxSlider.value; // Prevent input overlap
+  }
+  minSlider.value = minAmountInput.value;
+  minValueLabel.textContent = minAmountInput.value;
+});
+
+// Sync the max amount input with the slider and display value
+maxAmountInput.addEventListener('input', function () {
+  if (parseInt(maxAmountInput.value) < parseInt(minSlider.value)) {
+    maxAmountInput.value = minSlider.value; // Prevent input overlap
+  }
+  maxSlider.value = maxAmountInput.value;
+  maxValueLabel.textContent = maxAmountInput.value;
+});
+
+  
+
 // ++++++ range END 
 const dateInput = document.getElementById('date-input');
         const calendarPopup = document.getElementById('calendar-popup');
@@ -2049,7 +2035,7 @@ const dateInput = document.getElementById('date-input');
             isPopupVisible = false;
             calendarPopup.classList.add('hidden');
         });
-
+ 
     </script>
     
 </body>
