@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices</title>
+    <!-- ========== All Css Link Here  -->
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/slick.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+   
+    <!-- ========== Navbar START == -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container navbar_area d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
+          <div class="d-flex align-items-center d-lg-none manu_profile position-relative">
+            <!-- <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+
+            <img src="images/person/person.png" alt="img">
+            <div class="mabile_desk_profile_manu">
+                <div class="d-flex justify-content-between manu_logo">
+                    <img src="images/logo.png" alt="logo">
+                    <i class="fa fa-times"></i>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">Bookings</a>
+                      </li>
+                      <li>
+                        <a href="#">Invoices</a>
+                      </li>
+                      <div class="my_line"></div>
+                    <li><a href="#">Profile Details</a></li>
+                    <li class=""><a href="#">Settings</a></li>
+                    <div class="my_line"></div>
+                    <li><a href="#" class="logout">Log out</a></li>
+                    
+                </ul>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bookings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Invoices</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-none d-lg-flex align-items-center position-relative manu_profile_m">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <img src="images/person/person.png" alt="img">
+            <div class="mabile_desk_profile_manu">
+                <ul>
+                    <li><a href="#">Profile Details</a></li>
+                    <li class="centerr"><a href="#">Settings</a></li>
+                    <li><a href="#" class="logout">Log out</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+    <!-- ========== Navbar END == -->
+    <!-- ========== Booking Status Area START == -->
+     <section id="booking_status">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="booing_status">
+                        <h3>Invoices</h3>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Sokhna</button>
+                              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Marina</button>
+                              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Sharm</button>
+                              <button class="nav-link" id="nav-matrouh-tab" data-bs-toggle="tab" data-bs-target="#nav-matrouh" type="button" role="tab" aria-controls="nav-matrouh" aria-selected="false">Matrouh</button>
+                            </div>
+                          </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <div class="row">
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>unpaid <br class="mobilehid"> invoices</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/stopwatch.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>Unpaid <br class="mobilehid"> Annual fees</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/bill.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>Rental <br class="mobilehid"> stays</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/doller.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="row">
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>unpaid <br class="mobilehid"> invoices</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/stopwatch.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>Unpaid <br class="mobilehid"> Annual fees</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/bill.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>Rental <br class="mobilehid"> stays</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/doller.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div class="row">
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>unpaid <br class="mobilehid"> invoices</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/stopwatch.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>Unpaid <br class="mobilehid"> Annual fees</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/bill.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>Rental <br class="mobilehid"> stays</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/doller.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-matrouh" role="tabpanel" aria-labelledby="nav-matrouh-tab">
+                                <div class="row">
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>unpaid <br class="mobilehid"> invoices</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/stopwatch.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>Unpaid <br class="mobilehid"> Annual fees</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/bill.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <div class="booking_status_card d-flex justify-content-between" style="padding: 24px 15px;">
+                                            <div class="booking_status_name nghf">
+                                                <h3>2</h3>
+                                                <p>Rental <br class="mobilehid"> stays</p>
+                                            </div>
+                                            <div class="my_imgg_bg">
+                                                <img src="images/icons/doller.svg" alt="time">
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="data_table">
+                        <nav>
+                            <div class="d-flex justify-content-between">
+                                <div class="row w-100">
+                                    <div class="col-lg-8">
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-jholok4-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok4" type="button" role="tab" aria-controls="nav-jholok4" aria-selected="true">Installments</button>
+                                            <button class="nav-link" id="nav-jholok3-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok3" type="button" role="tab" aria-controls="nav-jholok3" aria-selected="false">Annual fees</button>
+                                            <button class="nav-link" id="nav-jholok2-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok2" type="button" role="tab" aria-controls="nav-jholok2" aria-selected="false">Rental fees</button>
+                                            <button class="nav-link" id="nav-jholok1-tab" data-bs-toggle="tab" data-bs-target="#nav-jholok1" type="button" role="tab" aria-controls="nav-jholok1" aria-selected="false">History</button>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 soft_collam justify-content-end d-flex">
+                                        <div class="filter_button_area d-flex position-relative">
+                                            <div class="filter_button">
+                                                <button id="filter-btn"><i class="fa fa-sliders" aria-hidden="true"></i> Filter</button>
+                                            </div>
+                                            <!-- ===== Filter  -->
+                                             <!-- Filter Popup -->
+                                             <form id="mainForm" class="position-absolute bg-white w-25">
+                                            <div class="card">
+                                                <div class="card-header text-start">
+                                                    <h3>Filter</h3>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="mb-3 text-start">
+                                                        <p class="range_title">Date Range</p>
+                                                        <label for="exampleInputEmail1" class="form-label">From</label>
+                                                        <div class="date-picker-wrapper position-relative">
+                                                            <i class="fa fa-calendar"></i>
+                                                            <input type="text" id="date-input" placeholder="Choose Date" readonly />
+                                                          </div>
+                                                        
+                                                          <div id="calendar-popup" class="calendar-popup hidden">
+                                                            <div class="calendar-header">
+                                                              <i id="prev-month" class="fa fa-chevron-left nav-icon" aria-hidden="true"></i>
+                                                              <span id="month-name"></span>
+                                                              <i id="next-month" class="fa fa-chevron-right nav-icon" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div id="calendar"></div>
+                                                          </div>
+                                                    </div>
+                                                    <div class="my_line"></div>
+                                                    <div class="slider-container">
+                                                        <h2 class="range_title">Amount</h2>
+                                                        <div class="slider">
+                                                            <div class="range-labels">
+                                                                <label for="min-range" id="min-value">100</label>
+                                                                <label for="max-range" id="max-value">900</label>
+                                                            </div>
+                                                            <div class="slider-range">
+                                                                <input type="range" id="min-range" min="0" max="1000" value="100">
+                                                                <input type="range" id="max-range" min="0" max="1000" value="900">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="manual-inputs d-flex justify-content-between">
+                                                            <div class="first_input text-start">
+                                                                <label for="min-amount">Min Amount: </label>
+                                                                <div class="position_card position-relative">
+                                                                    <input type="text" id="min-amount" value="100" min="0" max="1000" class="w-100" placeholder="Amount">
+                                                                    <p>EGP</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dui_input text-start">
+                                                                <label for="max-amount">Max Amount: </label>
+                                                            <div class="position_card position-relative">
+                                                                <input type="text" id="max-amount" value="900" min="0" max="1000" class="w-100">
+                                                                <p>EGP</p>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="my_line"></div>
+                                                    <div class="d-flex filter_form_button">
+                                                        <button type="reset" class="w-50 reset">Reset</button>
+                                                        <button class="w-50 submit" type="submit">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+
+                                            </form>
+                                            
+                                            
+
+
+                                            <div class="soft_position position-relative">
+                                                <button id="openPopupButton"><i class="fa fa-align-center" aria-hidden="true"></i> Soft</button>
+                                                <div id="popupdorsoft" class="popupdorsoft" style="display: none;">
+                                                    <form id="custom-form" action="/submit" method="post">
+                                                        <div class="custom-select">
+                                                            <div class="select-items">
+                                                                <div data-value="newest" class="selected">
+                                                                    <i class="fa fa-check" aria-hidden="true"></i> Newest
+                                                                </div>
+                                                                <div data-value="oldest">
+                                                                    <i class="fa fa-check" aria-hidden="true" style="display: none;"></i> Oldest
+                                                                </div>
+                                                                <div data-value="most-amount">
+                                                                    <i class="fa fa-check" aria-hidden="true" style="display: none;"></i> Most Amount
+                                                                </div>
+                                                                <div data-value="lowest-amount">
+                                                                    <i class="fa fa-check" aria-hidden="true" style="display: none;"></i> Lowest Amount
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" id="selected-option" name="selected-option" value="newest">
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>                            </div>
+                          </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-jholok4" role="tabpanel" aria-labelledby="nav-jholok4-tab">
+                                 <!-- =======All Tab Content Start-->
+                                        
+
+                                        <!-- Desktop Table (Visible on large screens) -->
+                                        <div class="table-responsive desktop-table">
+                                            <table class="table table-bordered">
+                                                <thead class="my_bg_color">
+                                                    <tr>
+                                                        <th>Due Date</th>
+                                                        <th>Invoice number</th>
+                                                        <th>Status</th>
+                                                        <th>Fees</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="booking-table-body">
+                                                    <tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow dis_not_pay">Pay Now</a></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow"><img src="images/icons/import.svg" alt="img"> download</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok active" id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr>
+                                                    <!-- Add more static rows here -->
+                                                </tbody>
+                                            </table>
+                                            <!-- Showing X from Y display with page selector -->
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <div class="show-entries">
+                                                    Showing page 
+                                                    <select id="current-page" class="form-select d-inline-block w-auto">
+                                                        <!-- Page numbers will be populated by JavaScript -->
+                                                    </select>
+                                                    from <span id="total-pages"></span>
+                                                </div>
+                                                <!-- Pagination -->
+                                                <nav aria-label="Page navigation example" class="d-flex justify-content-end">
+                                                    <ul class="pagination" id="pagination">
+                                                        <!-- Pagination items will be populated by JavaScript -->
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mobile Table (Visible on mobile screens only) -->
+                                       <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2 donwload_link" ><img src="images/icons/import.svg" alt="icon" class="me-1">download</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                       
+                                 <!-- =======Content End -->
+                            </div>
+                            <div class="tab-pane fade" id="nav-jholok3" role="tabpanel" aria-labelledby="nav-jholok3-tab">
+                                        <!-- =======All Tab Content Start-->
+                                        
+
+                                        <!-- Desktop Table (Visible on large screens) -->
+                                        <div class="table-responsive desktop-table">
+                                            <table class="table table-bordered">
+                                                <thead class="my_bg_color">
+                                                    <tr>
+                                                        <th>Due Date</th>
+                                                        <th>Invoice number</th>
+                                                        <th>Status</th>
+                                                        <th>Fees</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="booking-table-body">
+                                                    <tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok active" id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr>
+                                                    <!-- Add more static rows here -->
+                                                </tbody>
+                                            </table>
+                                            <!-- Showing X from Y display with page selector -->
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <div class="show-entries">
+                                                    Showing page 
+                                                    <select id="current-page" class="form-select d-inline-block w-auto">
+                                                        <!-- Page numbers will be populated by JavaScript -->
+                                                    </select>
+                                                    from <span id="total-pages"></span>
+                                                </div>
+                                                <!-- Pagination -->
+                                                <nav aria-label="Page navigation example" class="d-flex justify-content-end">
+                                                    <ul class="pagination" id="pagination">
+                                                        <!-- Pagination items will be populated by JavaScript -->
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mobile Table (Visible on mobile screens only) -->
+                                       <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                       
+                                 <!-- =======Content End -->
+                            </div>
+                            <div class="tab-pane fade" id="nav-jholok2" role="tabpanel" aria-labelledby="nav-jholok2-tab">
+                                    <!-- =======All Tab Content Start-->
+                                        
+
+                                        <!-- Desktop Table (Visible on large screens) -->
+                                        <div class="table-responsive desktop-table">
+                                            <table class="table table-bordered">
+                                                <thead class="my_bg_color">
+                                                    <tr>
+                                                        <th>Due Date</th>
+                                                        <th>Invoice number</th>
+                                                        <th>Status</th>
+                                                        <th>Fees</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="booking-table-body">
+                                                    <tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok active" id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr>
+                                                    <!-- Add more static rows here -->
+                                                </tbody>
+                                            </table>
+                                            <!-- Showing X from Y display with page selector -->
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <div class="show-entries">
+                                                    Showing page 
+                                                    <select id="current-page" class="form-select d-inline-block w-auto">
+                                                        <!-- Page numbers will be populated by JavaScript -->
+                                                    </select>
+                                                    from <span id="total-pages"></span>
+                                                </div>
+                                                <!-- Pagination -->
+                                                <nav aria-label="Page navigation example" class="d-flex justify-content-end">
+                                                    <ul class="pagination" id="pagination">
+                                                        <!-- Pagination items will be populated by JavaScript -->
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mobile Table (Visible on mobile screens only) -->
+                                       <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                       
+                                 <!-- =======Content End -->
+                            </div>
+                            <div class="tab-pane fade" id="nav-jholok1" role="tabpanel" aria-labelledby="nav-jholok1-tab">
+                                        <!-- =======All Tab Content Start-->
+                                        
+
+                                        <!-- Desktop Table (Visible on large screens) -->
+                                        <div class="table-responsive desktop-table">
+                                            <table class="table table-bordered">
+                                                <thead class="my_bg_color">
+                                                    <tr>
+                                                        <th>Due Date</th>
+                                                        <th>Invoice number</th>
+                                                        <th>Status</th>
+                                                        <th>Fees</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="booking-table-body">
+                                                    <tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok " id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr><tr>
+                                                        <td>25 Aug</td>
+                                                        <td>
+                                                            <div class="checkboxes">
+                                                                <div class="jholok active" id="checkbox1"></div>
+                                                                <div class="jholok active" id="checkbox2"></div>
+                                                                <div class="jholok active" id="checkbox3"></div>
+                                                                <div class="jholok active" id="checkbox4"></div>
+                                                                <div class="jholok" id="checkbox5"></div>
+                                                              </div>
+                                                              
+                                                        </td>
+                                                        <td><span class="pending_status"><i class="fa fa-circle" aria-hidden="true"></i> Pending</span></td>
+                                                        <td>8000L.E</td>
+                                                        <td><a href="#" class="jholok_paynow">Pay Now</a></td>
+                                                        
+                                                    </tr>
+                                                    <!-- Add more static rows here -->
+                                                </tbody>
+                                            </table>
+                                            <!-- Showing X from Y display with page selector -->
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <div class="show-entries">
+                                                    Showing page 
+                                                    <select id="current-page" class="form-select d-inline-block w-auto">
+                                                        <!-- Page numbers will be populated by JavaScript -->
+                                                    </select>
+                                                    from <span id="total-pages"></span>
+                                                </div>
+                                                <!-- Pagination -->
+                                                <nav aria-label="Page navigation example" class="d-flex justify-content-end">
+                                                    <ul class="pagination" id="pagination">
+                                                        <!-- Pagination items will be populated by JavaScript -->
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mobile Table (Visible on mobile screens only) -->
+                                       <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                        <!-- ==== for Loop Start  -->
+                                       <div class="mobile-table">
+                                        <div class="booking-details">
+                                            <span class="titlestatus">
+                                                <div class="d-flex">
+                                                    <div class="invoice_table_img">
+                                                        <img src="images/icons/Blank-Calendar.svg" alt="img">
+                                                    </div>
+                                                    
+                                                    <div class="invoice_mobile_title">
+                                                        <p class="titlestatus2 mb-0">
+                                                            Due Date
+                                                        </p>
+                                                        <h3>15 Aug 2024</h3>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="upcoming_status status_buttons"><i class="fa fa-circle" aria-hidden="true"></i> Upcoming</span>
+                                        </div>
+                                        <div>
+                                            <div class="my_line"></div>
+                                            <div class="booking-details">
+                                                <span class="titlestatus">Installments</span>
+                                                <div class="checkgulo">
+                                                    <div class="checkboxes">
+                                                        <div class="jholok active" id="checkbox1"></div>
+                                                        <div class="jholok active" id="checkbox2"></div>
+                                                        <div class="jholok active" id="checkbox3"></div>
+                                                        <div class="jholok " id="checkbox4"></div>
+                                                        <div class="jholok" id="checkbox5"></div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Booking Fees</span>
+                                                <span class="titlestatus2prize">EGP 2500</span>
+                                            </div>
+                                            <div class="booking-details mt-2">
+                                                <span class="titlestatus2">Invoice number</span>
+                                                <span class="titlestatus2prize" style="font-weight: 500;">#500000731</span>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="#" class="tr_pay_link w-100 text-center p-2 mt-2">Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <!-- ==== for Loop End -->
+                                       
+                                 <!-- =======Content End -->
+                            </div>
+                            
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+     </section>
+    <!-- ========== Booking Status Area End == -->
+    
+    <!-- ========== Navbar END == -->
+    
+    <!-- ========== Navbar END == -->
+    <!-- ========== Design Code START == -->
+     <!-- <img class="background_murk" src="images/design/background_effect.png" alt="bg"> -->
+    <!-- ========== Design Code END == -->
+    <!-- ========== All JS Link Here  -->
+  
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <script>
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const openPopupButton = document.getElementById('openPopupButton');
+    const popupdorsoft = document.getElementById('popupdorsoft');
+    const selectItems = document.querySelector('.select-items');
+    const hiddenInput = document.getElementById('selected-option');
+    const form = document.getElementById('custom-form');
+
+    // Toggle popup visibility
+    openPopupButton.addEventListener('click', () => {
+        if (popupdorsoft.style.display === 'none' || popupdorsoft.style.display === '') {
+            popupdorsoft.style.display = 'block';
+            document.body.classList.add('no-scroll'); // Disable body scrolling
+        } else {
+            popupdorsoft.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Enable body scrolling
+        }
+    });
+
+    // Event listener for dropdown item selection
+    selectItems.addEventListener('click', function(event) {
+        const clickedItem = event.target.closest('div');
+        if (clickedItem) {
+            // Remove the check icon from all items
+            const items = selectItems.querySelectorAll('div');
+            items.forEach(item => {
+                item.classList.remove('selected');
+                item.querySelector('i').style.display = 'none'; // Hide all check icons
+            });
+
+            // Add the check icon to the selected item
+            clickedItem.classList.add('selected');
+            clickedItem.querySelector('i').style.display = 'inline'; // Show the check icon
+
+            // Update the hidden input value
+            hiddenInput.value = clickedItem.getAttribute('data-value');
+
+            // Hide the dropdown after selection
+            popupdorsoft.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Enable body scrolling after closing the popup
+
+            // Submit the form
+            form.submit();
+        }
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.custom-select') && !event.target.closest('#openPopupButton')) {
+            popupdorsoft.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Enable body scrolling after closing the popup
+        }
+    });
+});
+        // ?? For Table ========== 
+// Function to paginate individual tables
+function paginate(table, rowsPerPage, currentPage) {
+    const rows = table.querySelectorAll('tbody tr');
+    const totalRows = rows.length;
+    const totalPages = Math.ceil(totalRows / rowsPerPage);
+
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+
+    rows.forEach((row, index) => {
+        row.style.display = (index >= start && index < end) ? '' : 'none';
+    });
+
+    const totalPagesElement = table.closest('.table-responsive').querySelector('#total-pages');
+    totalPagesElement.innerText = totalPages;
+}
+
+// Function to populate page selector and add event listeners
+function populatePageSelector(table, rowsPerPage) {
+    const rows = table.querySelectorAll('tbody tr');
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+    const pageSelector = table.closest('.table-responsive').querySelector('#current-page');
+    pageSelector.innerHTML = ''; // Clear existing options
+
+    for (let i = 1; i <= totalPages; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        pageSelector.appendChild(option);
+    }
+
+    // Add event listener for page selection
+    pageSelector.addEventListener('change', function () {
+        const currentPage = parseInt(this.value);
+        paginate(table, rowsPerPage, currentPage);
+        displayPagination(table, rowsPerPage, currentPage);
+    });
+}
+
+// Function to display pagination controls
+function displayPagination(table, rowsPerPage, currentPage) {
+    const rows = table.querySelectorAll('tbody tr');
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+    const pagination = table.closest('.table-responsive').querySelector('#pagination');
+    pagination.innerHTML = ''; // Clear existing pagination
+
+    // Add Previous button
+    const prevDisabled = currentPage === 1 ? 'disabled' : '';
+    pagination.insertAdjacentHTML('beforeend', `
+        <li class="page-item ${prevDisabled}">
+            <button class="page-link prev-page">
+                <i class="fa fa-angle-left pagenet" aria-hidden="true"></i>
+            </button>
+        </li>
+    `);
+
+    // Define the visible page range
+    let startPage = Math.max(1, currentPage - Math.floor(4 / 2));
+    let endPage = Math.min(totalPages, startPage + 4 - 1);
+
+    if (endPage - startPage < 4 - 1) {
+        startPage = Math.max(1, endPage - 4 + 1);
+    }
+
+    // Add page buttons
+    for (let i = startPage; i <= endPage; i++) {
+        const activeClass = i === currentPage ? 'active' : '';
+        pagination.insertAdjacentHTML('beforeend', `
+            <li class="page-item ${activeClass}">
+                <button class="page-link" data-page="${i}">${i}</button>
+            </li>
+        `);
+    }
+
+    // Add Next button
+    const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+    pagination.insertAdjacentHTML('beforeend', `
+        <li class="page-item ${nextDisabled}">
+            <button class="page-link next-page">
+                <i class="fa fa-angle-right pagenet" aria-hidden="true"></i>
+            </button>
+        </li>
+    `);
+
+    // Add event listeners for page buttons
+    pagination.querySelectorAll('.page-link[data-page]').forEach(link => {
+        link.addEventListener('click', function () {
+            const selectedPage = parseInt(this.getAttribute('data-page'));
+            paginate(table, rowsPerPage, selectedPage);
+            populatePageSelector(table, rowsPerPage);
+            displayPagination(table, rowsPerPage, selectedPage);
+        });
+    });
+
+    // Add event listener for Previous button
+    const prevBtn = pagination.querySelector('.prev-page');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+            if (currentPage > 1) {
+                currentPage--;
+                paginate(table, rowsPerPage, currentPage);
+                populatePageSelector(table, rowsPerPage);
+                displayPagination(table, rowsPerPage, currentPage);
+            }
+        });
+    }
+
+    // Add event listener for Next button
+    const nextBtn = pagination.querySelector('.next-page');
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+            if (currentPage < totalPages) {
+                currentPage++;
+                paginate(table, rowsPerPage, currentPage);
+                populatePageSelector(table, rowsPerPage);
+                displayPagination(table, rowsPerPage, currentPage);
+            }
+        });
+    }
+}
+
+// Initialize pagination for each table
+document.querySelectorAll('.table-responsive').forEach(tableContainer => {
+    const table = tableContainer.querySelector('table');
+    const rowsPerPage = 10;
+    let currentPage = 1;
+
+    paginate(table, rowsPerPage, currentPage);
+    populatePageSelector(table, rowsPerPage);
+    displayPagination(table, rowsPerPage, currentPage);
+});
+
+    </script>
+    
+</body>
+</html>

@@ -80,8 +80,9 @@
     /* background-color: #ffffff; */
   }
   .calendar-body div {
-    padding: 12px 10px;
+    padding: 0px 0px;
     font-size: 12px;
+    margin-top: 10px;
   }
   .calendar-weekdays {
     font-size: 12px;
@@ -206,11 +207,14 @@
 }
 #infoBox {
 	position: fixed;
-	left: -5% !important;
-	width: 111% !important;
+	/* left: -5% !important; */
+	/* width: 111% !important; */
 	margin: 0px;
 	bottom: 0px !important;
 	right: 0px !important;
+	position: fixed !important;
+	width: 100%;
+	left: 0px !important;
 }
 #closeInfoBox {
 	display: flex !important;
@@ -392,11 +396,11 @@ body{
 
 
 #mainForm {
-	
 	position: fixed !important;
 	bottom: 0px;
 	left: 0px;
-  width: 100%;
+	width: 100%;
+	z-index: 9999999 !important;
 }
 .card {
 	position: fixed !important;
@@ -409,7 +413,93 @@ body{
 	bottom: 0px;
 	width: 100%;
 }
-
+.status_buttons {
+	height: 26px;
+	margin-top: 10px;
+}
+.mobilehid {
+  display: initial ;
+}
+.nghf p {
+	font-family: Quicksand;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 17px !important;
+	text-align: left;
+	color: #878787;
+	margin-top: 14px !important;
+	margin-bottom: 0px;
+}
+.mabile_desk_profile_manu {
+	background-color: #ffffff;
+	position: fixed;
+	top: 0px !important;
+	z-index: 999 !important;
+	border-radius: 10px;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 999999999999999999999 !important;
+}
+.my_line {
+	height: 1.5px;
+	background-color: #E6E8EC;
+	width: 100%;
+	margin: 5px 0px;
+}
+.mabile_desk_profile_manu ul {
+	background-color: #ffffff;
+	margin-top: 10px;
+}
+.mobile_bottom_fix {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 12px 16px;
+}
+.mobile_bottom_fix .pay_button_mobile{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.mobile_bottom_fix button{
+  margin-top: 0px;
+}
+.tarik_p {
+	padding: 5px 10px 10px 10px;
+	width: 32px;
+	height: 32px;
+	margin-bottom: 0px !important;
+}
+.selected-end {
+	background-color: #4e308e1f;
+	border-top-right-radius: 100px !important;
+	border-bottom-right-radius: 100px !important;
+	width: 32px !important;
+}
+.prev-next-month {
+	margin-top: 6px;
+}
+div[data-date="2024-9-11"] .tarik_p::after, div[data-date="2024-9-12"] .tarik_p::after, div[data-date="2024-9-15"] .tarik_p::after, div[data-date="2024-9-20"] .tarik_p::after {
+	content: '';
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-color: #007bff;
+	border-radius: 1.6px !important;
+	margin: -2px auto 0px !important;
+}
+div[data-date="2024-9-11"] .tarik_p::after, div[data-date="2024-10-12"] .tarik_p::after, div[data-date="2024-10-15"] .tarik_p::after, div[data-date="2024-10-20"] .tarik_p::after, div[data-date="2024-10-21"] .tarik_p::after, div[data-date="2024-10-22"] .tarik_p::after, div[data-date="2024-10-23"] .tarik_p::after {
+	content: '';
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-color: #BB2FBD;
+	border-radius: 1.6px;
+	margin: -2px auto 0 !important;
+	clip-path: polygon(49% 1%, 0% 100%, 100% 100%);
+}
 }
 
 
@@ -438,6 +528,20 @@ body{
 
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
+  .mabile_desk_profile_manu {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0px !important;
+    z-index: 999 !important;
+    border-radius: 10px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999999999999999 !important;
+  }
+  .mabile_desk_profile_manu ul {
+    margin-top: 30px;
+  }
   .booking_avibile{
     text-align: center;
     justify-content: center !important;
@@ -583,6 +687,9 @@ body{
       width: 100%;
       margin-top: 15%;
     }
+    .manu_logo{
+      display: none !important;
+    }
 }
 
 
@@ -645,4 +752,34 @@ body{
         top: 60% !important;
         transform: translateY(-50%);
         }
+        .only_mobile_bottom{
+          display: initial !important;
+          padding: 13px 16px;
+          background-color: #ffffff;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+        .only_mobile_bottom .pay_button_mobile p{
+          font-family: Quicksand;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 15px;
+          text-align: left;
+          color: #878787;
+        }
+        .only_mobile_bottom .pay_button_mobile span{
+          font-family: Quicksand;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 17.5px;          
+          color: #2C1B5A;
+        }
+        .card_request_book {
+          padding: 16px;
+          border-radius: 8px;
+          margin-bottom: 120px;
+        }
+       
 }

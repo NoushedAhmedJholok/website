@@ -274,15 +274,65 @@ button, a{
     position: relative;
     background-color: #ffffff;
   }
-  .selected-start-end {
+  .selected-start .tarik_p{
     background-color: #4D308E;
     color: #fff;
     border-radius: 100px !important;
   }
+  .selected-end .tarik_p{
+    background-color: #4D308E !important;
+    color: #fff;
+    border-radius: 100px !important;
+  }
+  .prev-next-month{
+    margin-top: 16px;
+  }
+  .calendar-body div {
+    /* display: grid; */
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    position: relative;
+  }
+  .selected-start-end p{
+    background-color: #4D308E;
+    color: #fff;
+    border-radius: 100px !important;
+  }
+  .tarik_p {
+    padding: 16px 10px 10px 10px;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0px !important;
+  }
+  .icondate {
+    width: 10px;
+    height: 10px;
+    /* background-color: #0056b3; */
+    padding: 0px;
+    position: absolute;
+  }
+  .day-cell {
+    position: relative;
+  }
+/* Circle under the selected dates */
+/* Circle under specific dates (e.g., 2024-09-05 and 2024-09-10) */
+
+
   .selected-range {
     background-color: #4e308e1f;
     color: #fff;
     border-radius: 0px !important;
+  }
+  .selected-start {
+    background-color: #4e308e1f;
+    border-top-left-radius: 100px !important;
+    border-bottom-left-radius: 100px !important;
+  }
+  .selected-end {
+    background-color: #4e308e1f;
+    border-top-right-radius: 100px !important;
+    border-bottom-right-radius: 100px !important;
+    width: 56px !important;
   }
   .calendar-header {
     font-family: Quicksand;
@@ -309,10 +359,13 @@ button, a{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
+    margin-left: 7px;
+    margin-right: -7px;
+    margin-top: 9px;
   }
   .calendar-body div {
     position: relative;
-    padding: 24px 20px;
+    /* padding: 15px 15px; */
     cursor: pointer;
     border-radius: 5px;
     font-family: Quicksand;
@@ -321,20 +374,18 @@ button, a{
     line-height: 22.5px;
     text-align: center;
     color: #313131;
-    width: 100% !important;
-    /* height: 54px; */
+    /* width: 56px !important;
+    height: 56px; */
+    /* margin-left: 15px; */
+    text-align: center;
+
+    /* justify-content: start; */
   }
-  .calendar-body div:hover {
+  .calendar-body div:hover .tarik_p{
     background-color: #4D308E;
+    border-radius: 100px;
   }
-  .icon {
-    font-size: 0.8rem;
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-  }
+  
   .icon-down::before {
     content: '\2193'; /* Down arrow */
   }
@@ -360,6 +411,15 @@ button, a{
   }
   .forDesk{
     display: initial;
+  }
+  div[data-date="2024-9-11"] .tarik_p::after{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #007bff; 
+    border-radius: 50%;
+    margin: 5px auto 0;
   }
   @media (min-width: 768px) {
     .calendar-container {
@@ -1469,6 +1529,18 @@ line-height: 30px;
   border-radius: 16px;
   text-decoration: none;
 }
+.tr_pay_link{
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #ffffff !important;
+  padding: 4.5px 8px;
+  background-color: #4D308E;
+  border-radius: 16px;
+  text-decoration: none;
+}
 .upcoming_status{
   font-family: Quicksand;
   font-size: 12px;
@@ -1503,6 +1575,7 @@ line-height: 30px;
 	color: #2C1B5A;
 	cursor: pointer;
 	font-size: 24px;
+	margin-top: -7px;
 }
 .page-link{
   font-family: Quicksand;
@@ -1528,6 +1601,10 @@ line-height: 30px;
   margin: 0px 3px;
   border-radius: 8px;
   background-color: transparent;
+  margin-top: 7px;
+}
+button.page-link{
+  margin-top: 7px;
 }
 #current-page{
   font-size: 14px;
@@ -1999,6 +2076,7 @@ color: #4D308E;
 .card{
   border-radius: 10px;
   border: none;
+  z-index: 99 !important;
 }
 .card-header h3{
   font-family: Quicksand;
@@ -2008,6 +2086,9 @@ line-height: 20px;
 text-align: left;
 color: #4D308E;
 padding-top: 10px;
+}
+.dis_not_pay{
+  color: #4D308E66 !important;
 }
 .selectable-div {
   display: flex;
@@ -2131,6 +2212,208 @@ input[type="radio"]:checked + label .checkmark {
 }
 .call_center{
   margin-bottom: 50px;
+}
+.onon_div span{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;  
+  color: #878787;
+}
+.onon_div .kjh{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #313131; 
+  margin-bottom: 0px; 
+}
+
+/* Container for the checkboxes */
+.checkboxes {
+  display: flex;
+  gap: 10px;
+}
+
+/* Basic styles for the jholok elements */
+.jholok {
+  width: 16px;
+  height: 16px;
+  background-color: #EDEAF4;
+  border-radius: 100px;
+  position: relative;
+  cursor: not-allowed; /* No interaction allowed */
+  z-index: 9;
+}
+
+/* jholok when 'active' class is applied */
+.jholok.active {
+  background-color: #4D308E; /* Change the color for active checkboxes */
+}
+
+.jholok.active::after {
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 11px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	top: 1px;
+	left: 6px;
+	transform: rotate(45deg);
+}
+.jholok_paynow{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: left;
+color: #2C1B5A;  
+text-decoration: none;
+}
+.invoice_mobile_title h3{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.5px;
+  text-align: left;
+color: #2C1B5A;  
+}
+.invoice_table_img{
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  background-color: #4D308E1A;
+  border-radius: 100px;
+}
+.invoice_table_img img{
+  width: 24px;
+  height: 24px;
+}
+.invoice_mobile_title{
+  margin-left: 16px;
+  margin-top: 5px;
+}
+.mobilehid {
+  display: none;
+}
+.mabile_desk_profile_manu {
+	background-color: #ffffff7a;
+	/* margin-top: 24px; */
+	position: absolute;
+	top: -70%;
+	z-index: -9;
+	width: 200px;
+	right: -49%;
+	z-index: 999 !important;
+  border-radius: 10px;
+}
+.mabile_desk_profile_manu ul{
+  background-color: #ffffff;
+  margin-top: 120px;
+  list-style-type: none;
+  margin-left: 7px;
+  margin-right: 7px;
+  padding-left: 0px;
+  padding: 16px;
+  border-radius: 10px;
+}
+.mabile_desk_profile_manu ul li a{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+color: #2C1B5A;  
+text-decoration: none;
+padding-left: 10px;
+}
+.manu_profile{
+  padding: 3px 0px 3px 15px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.manu_profile_m{
+  padding: 3px 0px 3px 15px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.mabile_desk_profile_manu ul li{
+  padding: 10px 0px;
+}
+.mabile_desk_profile_manu ul li.centerr{
+  border-bottom: 1.5px solid #E6E8EC;
+  border-top: 1.5px solid #E6E8EC;
+}
+.mabile_desk_profile_manu ul li a.logout{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+color: #EF3A5D;  
+text-decoration: none;
+}
+.manu_profile i, .manu_profile img{
+  position: relative;
+  z-index: 9999;
+}
+.manu_profile_m i, .manu_profile_m img{
+  position: relative;
+  z-index: 9999;
+}
+.mabile_desk_profile_manu {
+  display: none;
+  z-index: 999;
+  /* background-color: #EDEAF4; */
+  /* Add any other styling you need */
+}
+.manu_profile.active {
+	padding: 3px 0px 3px 15px;
+	border-radius: 100px;
+	cursor: pointer;
+  background-color: #EDEAF4;
+}
+.manu_profile_m.active {
+	padding: 3px 0px 3px 15px;
+	border-radius: 100px;
+	cursor: pointer;
+  background-color: #EDEAF4;
+}
+.mabile_desk_profile_manu ul li:hover {
+	background-color: #EDEAF4;
+  border-radius: 8px;
+}
+.manu_profile_m.active .mabile_desk_profile_manu {
+  display: block;
+}
+.mabile_desk_profile_manu img {
+	height: 36px;
+	margin-left: 5%;
+	margin-top: 6%;
+}
+.mabile_desk_profile_manu i {
+	background-color: #F4F2F7;
+	color: #2C1B5A;
+	font-size: 19px;
+	margin-top: 5%;
+	margin-right: 7%;
+	padding: 10px 13px;
+	border-radius: 100px;
+}
+.manu_profile.active .mabile_desk_profile_manu{
+	display: initial;
+}
+.only_mobile_bottom{
+  display: none;
+}
+.donwload_link{
+  background-color: #4D308E1A !important;
+  color: #4D308E !important;
 }
 /*--- /.price-range-slider ---*/
 /* ========== Home Page Css End ==  */

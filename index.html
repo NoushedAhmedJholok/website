@@ -10,19 +10,80 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/style.css">
      <link rel="stylesheet" href="css/media.css">
+     <style>
+            /* Blue Selected Date   */
+        div[data-date="2024-9-11"] .tarik_p::after, 
+        div[data-date="2024-9-12"] .tarik_p::after, 
+        div[data-date="2024-9-15"] .tarik_p::after, 
+        div[data-date="2024-9-20"] .tarik_p::after
+        
+        {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #007bff; 
+            border-radius: 1.6px;
+            margin: 5px auto 0;
+        }
+              /* Pink Selected Date   */
+              div[data-date="2024-9-11"] .tarik_p::after, 
+        div[data-date="2024-10-12"] .tarik_p::after, 
+        div[data-date="2024-10-15"] .tarik_p::after, 
+        div[data-date="2024-10-20"] .tarik_p::after,
+        div[data-date="2024-10-21"] .tarik_p::after,
+        div[data-date="2024-10-22"] .tarik_p::after,
+        div[data-date="2024-10-23"] .tarik_p::after
+        
+        {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #BB2FBD; 
+            border-radius: 1.6px;
+            margin: 5px auto 0;
+            clip-path: polygon(49% 1%, 0% 100%, 100% 100%);
+        }
+     </style>
 </head>
 <body>
     <!-- ========== Navbar START == -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container navbar_area d-flex align-items-center justify-content-between">
           <a class="navbar-brand" href="#">
             <img src="images/logo.png" alt="logo">
           </a>
-          <div class="d-flex align-items-center d-lg-none">
-            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="d-flex align-items-center d-lg-none manu_profile position-relative">
+            <!-- <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+
             <img src="images/person/person.png" alt="img">
+            <div class="mabile_desk_profile_manu">
+                <div class="d-flex justify-content-between manu_logo">
+                    <img src="images/logo.png" alt="logo">
+                    <i class="fa fa-times"></i>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">Bookings</a>
+                      </li>
+                      <li>
+                        <a href="#">Invoices</a>
+                      </li>
+                      <div class="my_line"></div>
+                    <li><a href="#">Profile Details</a></li>
+                    <li class=""><a href="#">Settings</a></li>
+                    <div class="my_line"></div>
+                    <li><a href="#" class="logout">Log out</a></li>
+                    
+                </ul>
+            </div>
           </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -37,13 +98,20 @@
               </li>
             </ul>
           </div>
-          <div class="d-none d-lg-flex align-items-center">
-            <span class="navbar-toggler-icon"></span>
+          <div class="d-none d-lg-flex align-items-center position-relative manu_profile_m">
+            <i class="fa fa-bars" aria-hidden="true"></i>
             <img src="images/person/person.png" alt="img">
+            <div class="mabile_desk_profile_manu">
+                <ul>
+                    <li><a href="#">Profile Details</a></li>
+                    <li class="centerr"><a href="#">Settings</a></li>
+                    <li><a href="#" class="logout">Log out</a></li>
+                </ul>
+            </div>
           </div>
         </div>
       </nav>
-      
+    
     <!-- ========== Navbar END == -->
     <!-- ========== Banner Area START == -->
     <section id="banner_area">
@@ -520,13 +588,13 @@
             </div>
             <div class="row">
                 <!-- Current Month -->
-                <div class="col-md-12 col-sm-12 col-lg-12 calendar">
+                <div class="col-md-12 col-sm-12 col-lg-12">
                     <div class="calendar-container">
                         <!-- Current Month -->
                         <div class="calendar">
                           <span class="arrow-left" id="prevMonth"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
                           <span class="arrow-right forMobile" id="nextMonth"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                          <div class="calendar-header" id="currentMonth1">
+                          <div class="calendar-header justify-content-center" id="currentMonth1">
                             <span id="currentMonthTitle1"></span>
                           </div>
                           <div class="calendar-weekdays">
@@ -544,7 +612,7 @@
                         <!-- Next Month -->
                         <div class="calendar forDesk">
                           <span class="arrow-right" id="nextMonth"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                          <div class="calendar-header" id="currentMonth2">
+                          <div class="calendar-header justify-content-center mt-1" id="currentMonth2">
                             <span id="currentMonthTitle2"></span>
                           </div>
                           <div class="calendar-weekdays">
@@ -630,7 +698,8 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/calender.js"></script>
+    
     <script>
         $('.card_slider_main').slick({
             slidesToShow: 1,
@@ -648,6 +717,7 @@
             prevArrow: '.slider_two_left',
             nextArrow: '.slider_two_right'
         });
+     
     </script>
 </body>
 </html>

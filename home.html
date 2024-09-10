@@ -2190,121 +2190,139 @@
     });
 });
         // ?? For Table ========== 
-
-    const totalRows = document.querySelectorAll('#booking-table-body tr').length;
-    let currentPage = 1;
-    const rowsPerPage = 10; // Fixed number of rows per page
-    const visiblePages = 4; // Number of page numbers to show around current page
+// Function to paginate individual tables
+function paginate(table, rowsPerPage, currentPage) {
+    const rows = table.querySelectorAll('tbody tr');
+    const totalRows = rows.length;
     const totalPages = Math.ceil(totalRows / rowsPerPage);
 
-    function paginate(rowsPerPage, currentPage) {
-        const start = (currentPage - 1) * rowsPerPage;
-        const end = start + rowsPerPage;
-        const rows = document.querySelectorAll('#booking-table-body tr');
-        rows.forEach((row, index) => {
-            row.style.display = (index >= start && index < end) ? '' : 'none';
-        });
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
 
-        // Update total pages display
-        document.getElementById('total-pages').innerText = totalPages;
+    rows.forEach((row, index) => {
+        row.style.display = (index >= start && index < end) ? '' : 'none';
+    });
+
+    const totalPagesElement = table.closest('.table-responsive').querySelector('#total-pages');
+    totalPagesElement.innerText = totalPages;
+}
+
+// Function to populate page selector and add event listeners
+function populatePageSelector(table, rowsPerPage) {
+    const rows = table.querySelectorAll('tbody tr');
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+    const pageSelector = table.closest('.table-responsive').querySelector('#current-page');
+    pageSelector.innerHTML = ''; // Clear existing options
+
+    for (let i = 1; i <= totalPages; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        pageSelector.appendChild(option);
     }
 
-    function populatePageSelector() {
-        const pageSelector = document.getElementById('current-page');
-        pageSelector.innerHTML = ''; // Clear existing options
+    // Add event listener for page selection
+    pageSelector.addEventListener('change', function () {
+        const currentPage = parseInt(this.value);
+        paginate(table, rowsPerPage, currentPage);
+        displayPagination(table, rowsPerPage, currentPage);
+    });
+}
 
-        for (let i = 1; i <= totalPages; i++) {
-            const option = document.createElement('option');
-            option.value = i;
-            option.textContent = i;
-            if (i === currentPage) {
-                option.selected = true;
-            }
-            pageSelector.appendChild(option);
-        }
+// Function to display pagination controls
+function displayPagination(table, rowsPerPage, currentPage) {
+    const rows = table.querySelectorAll('tbody tr');
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+    const pagination = table.closest('.table-responsive').querySelector('#pagination');
+    pagination.innerHTML = ''; // Clear existing pagination
 
-        // Event listener for page selection
-        pageSelector.addEventListener('change', function() {
-            currentPage = parseInt(this.value);
-            paginate(rowsPerPage, currentPage);
-            displayPagination();
-        });
-    }
-
-    function displayPagination() {
-        const pagination = document.getElementById('pagination');
-        pagination.innerHTML = '';
-
-        // Add Previous button
-        const prevDisabled = currentPage === 1 ? 'disabled' : '';
-        pagination.insertAdjacentHTML('beforeend', `
-            <li class="page-item ${prevDisabled}">
+    // Add Previous button
+    const prevDisabled = currentPage === 1 ? 'disabled' : '';
+    pagination.insertAdjacentHTML('beforeend', `
+        <li class="page-item ${prevDisabled}">
+            <button class="page-link prev-page">
                 <i class="fa fa-angle-left pagenet" aria-hidden="true"></i>
-            </li>
-        `);
+            </button>
+        </li>
+    `);
 
-        // Define start and end page range around current page
-        let startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
-        let endPage = Math.min(totalPages, startPage + visiblePages - 1);
+    // Define the visible page range
+    let startPage = Math.max(1, currentPage - Math.floor(4 / 2));
+    let endPage = Math.min(totalPages, startPage + 4 - 1);
 
-        // Adjust start and end if near limits
-        if (endPage - startPage < visiblePages - 1) {
-            startPage = Math.max(1, endPage - visiblePages + 1);
-        }
+    if (endPage - startPage < 4 - 1) {
+        startPage = Math.max(1, endPage - 4 + 1);
+    }
 
-        // Create the page number buttons
-        for (let i = startPage; i <= endPage; i++) {
-            const activeClass = i === currentPage ? 'active' : '';
-            pagination.insertAdjacentHTML('beforeend', `
-                <li class="page-item ${activeClass}">
-                    <button class="page-link" data-page="${i}">${i}</button>
-                </li>
-            `);
-        }
-
-        // Add Next button
-        const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+    // Add page buttons
+    for (let i = startPage; i <= endPage; i++) {
+        const activeClass = i === currentPage ? 'active' : '';
         pagination.insertAdjacentHTML('beforeend', `
-            <li class="page-item ${nextDisabled}">
-                <i class="fa fa-angle-right pagenet" aria-hidden="true"></i>
+            <li class="page-item ${activeClass}">
+                <button class="page-link" data-page="${i}">${i}</button>
             </li>
         `);
+    }
 
-        // Add event listeners for page buttons
-        document.querySelectorAll('.page-link[data-page]').forEach(link => {
-            link.addEventListener('click', function() {
-                currentPage = parseInt(this.getAttribute('data-page'));
-                paginate(rowsPerPage, currentPage);
-                populatePageSelector();
-                displayPagination();
-            });
+    // Add Next button
+    const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+    pagination.insertAdjacentHTML('beforeend', `
+        <li class="page-item ${nextDisabled}">
+            <button class="page-link next-page">
+                <i class="fa fa-angle-right pagenet" aria-hidden="true"></i>
+            </button>
+        </li>
+    `);
+
+    // Add event listeners for page buttons
+    pagination.querySelectorAll('.page-link[data-page]').forEach(link => {
+        link.addEventListener('click', function () {
+            const selectedPage = parseInt(this.getAttribute('data-page'));
+            paginate(table, rowsPerPage, selectedPage);
+            populatePageSelector(table, rowsPerPage);
+            displayPagination(table, rowsPerPage, selectedPage);
         });
+    });
 
-        // Event listener for Previous button
-        document.getElementById('prev-page').addEventListener('click', function() {
+    // Add event listener for Previous button
+    const prevBtn = pagination.querySelector('.prev-page');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
             if (currentPage > 1) {
                 currentPage--;
-                paginate(rowsPerPage, currentPage);
-                populatePageSelector();
-                displayPagination();
-            }
-        });
-
-        // Event listener for Next button
-        document.getElementById('next-page').addEventListener('click', function() {
-            if (currentPage < totalPages) {
-                currentPage++;
-                paginate(rowsPerPage, currentPage);
-                populatePageSelector();
-                displayPagination();
+                paginate(table, rowsPerPage, currentPage);
+                populatePageSelector(table, rowsPerPage);
+                displayPagination(table, rowsPerPage, currentPage);
             }
         });
     }
 
-    // Initialize table and pagination
-    paginate(rowsPerPage, currentPage);
-    populatePageSelector();
-    displayPagination();
+    // Add event listener for Next button
+    const nextBtn = pagination.querySelector('.next-page');
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+            if (currentPage < totalPages) {
+                currentPage++;
+                paginate(table, rowsPerPage, currentPage);
+                populatePageSelector(table, rowsPerPage);
+                displayPagination(table, rowsPerPage, currentPage);
+            }
+        });
+    }
+}
+
+// Initialize pagination for each table
+document.querySelectorAll('.table-responsive').forEach(tableContainer => {
+    const table = tableContainer.querySelector('table');
+    const rowsPerPage = 10;
+    let currentPage = 1;
+
+    paginate(table, rowsPerPage, currentPage);
+    populatePageSelector(table, rowsPerPage);
+    displayPagination(table, rowsPerPage, currentPage);
+});
+
 
     </script>
     
