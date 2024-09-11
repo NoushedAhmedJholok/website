@@ -595,7 +595,46 @@ html, body, .container {
   top: 0px;
 }
 
-
+.profile_img {
+	margin-top: 16px;
+}
+.profile_img{
+  display: flex;
+}
+.img_border {
+	width: 88px;
+	height: 88px;
+}
+.img_border img.my_img_upload {
+	width: 88px;
+	height: 88px;
+}
+.edit_img {
+	background-color: #ffffff;
+	width: 40px;
+	height: 40px;
+	border-radius: 1000px;
+	cursor: pointer;
+}
+.edit_img img {
+	padding: 10px 0px 0px 3px;
+}
+.jjhgygf{
+  margin-top: 5%;
+  margin-left: 10px;
+}
+.booing_status h3 {
+	font-size: 20px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	line-height: 0px;
+}
+.profile_img p {
+	text-align: left;
+}
+.profile_mr {
+	padding-bottom: 16px;
+}
 
 }
 

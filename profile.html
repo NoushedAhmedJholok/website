@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!-- ========== All Css Link Here  -->
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/slick.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+   
+    <!-- ========== Navbar START == -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container navbar_area d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
+          <div class="d-flex align-items-center d-lg-none manu_profile position-relative">
+            <!-- <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+
+            <img src="images/person/person.png" alt="img">
+            <div class="mabile_desk_profile_manu">
+                <div class="d-flex justify-content-between manu_logo">
+                    <img src="images/logo.png" alt="logo">
+                    <i class="fa fa-times"></i>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">Bookings</a>
+                      </li>
+                      <li>
+                        <a href="#">Invoices</a>
+                      </li>
+                      <div class="my_line"></div>
+                    <li><a href="#">Profile Details</a></li>
+                    <li class=""><a href="#">Settings</a></li>
+                    <div class="my_line"></div>
+                    <li><a href="#" class="logout">Log out</a></li>
+                    
+                </ul>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bookings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Invoices</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-none d-lg-flex align-items-center position-relative manu_profile_m">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <img src="images/person/person.png" alt="img">
+            <div class="mabile_desk_profile_manu">
+                <ul>
+                    <li><a href="#">Profile Details</a></li>
+                    <li class="centerr"><a href="#">Settings</a></li>
+                    <li><a href="#" class="logout">Log out</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+    <!-- ========== Navbar END == -->
+    <!-- ========== Booking Status Area START == -->
+     <section id="booking_status" class="mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="booing_status">
+                        <h3>My Profile</h3>
+                        <div class="row profile_header">
+                            <div class="col-lg-8 order-lg-1 order-2">
+                                <div class="profile_card">
+                                    <h3>Personal Info</h3>
+                                    <div class="my_line"></div>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-6">
+                                            <div class="profile_info">
+                                                <span>Full Name</span>
+                                                <p>Ahmed Massoud</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-6">
+                                            <div class="profile_info">
+                                                <span>Mobile</span>
+                                                <p>0100123456789</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-6">
+                                            <div class="profile_info">
+                                                <span>Email</span>
+                                                <p>Ahmed@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-6">
+                                            <div class="profile_info">
+                                                <span>BP Number</span>
+                                                <p>102030405060</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-6">
+                                            <div class="profile_info">
+                                                <span>Password</span>
+                                                <p>*********</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-6">
+                                            <div class="profile_info">
+                                                <a href="#">Change Password</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 order-lg-2 order-1">
+                                <div class="profile_img text-center">
+                                    <div class="profile_images text-center ">
+                                        <div class="img_border position-relative m-auto">
+                                            <img class="my_img_upload" src="images/person/Upload.png" alt="img">
+                                        <div class="edit_img">
+                                            <img  src="images/icons/img_edit.svg" alt="icon">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="jjhgygf">
+                                        <h3>Ahmed Massoud</h3>
+                                    <p>Joined 12 Aug, 2015</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Sokhna</button>
+                              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Marina</button>
+                              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Sharm</button>
+                              <button class="nav-link" id="nav-matrouh-tab" data-bs-toggle="tab" data-bs-target="#nav-matrouh" type="button" role="tab" aria-controls="nav-matrouh" aria-selected="false">Matrouh</button>
+                            </div>
+                          </nav>
+                        <div class="tab-content mt-3" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <div class="row profile_header">
+                                    <div class="col-lg-8 order-lg-1 order-2">
+                                        <div class="profile_card profile_mr">
+                                            <h3>Project Info</h3>
+                                            <div class="my_line"></div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-6">
+                                                    <div class="profile_info">
+                                                        <span>Project</span>
+                                                        <p>PBC</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-6">
+                                                    <div class="profile_info">
+                                                        <span>Zone</span>
+                                                        <p>6789</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="profile_info">
+                                                        <span>Contract Number</span>
+                                                        <p>90430830893459</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 order-lg-2 order-1">
+                                        <div class="profiile_tab_card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="sokhna_profile d-flex">
+                                                        <img src="images/person/profile.png" alt="profile">
+                                                        <div class="sokhna_name">
+                                                            <h3>PORTO SOKHNA</h3>
+                                                            <div class="d-flex">
+                                                                <span>Cabana Zone</span>
+                                                                <span>#234324</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <!-- Change this CSS code to increase or decrease the percentages below to develop -->
+                                                     <style>
+                                                        :root {
+                                                                --consumed-percentage: 20%;
+                                                                --rental-percentage: 30%;
+                                                                --remaining-percentage: 50%;
+                                                            }
+                                                     </style>
+                                                     <!-- ======= -->
+                                                    <div class="sokhna_progress">
+                                                        <div class="sokhna_progress_label">
+                                                            <div class="row">
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>20</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box1"></div>
+                                                                            <p>Remaining</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>5</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box2"></div>
+                                                                            <p>Consumed</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>5</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box3"></div>
+                                                                            <p>Rental</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>30</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box"></div>
+                                                                            <p>Nights</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                           
+                                                            
+                                                        </div>
+                                                        <div class="progress-bar">
+                                                            <div class="progress-segment progress-food">
+                                                                
+                                                            </div>
+                                                            <div class="progress-segment progress-clothes">
+                                                                
+                                                            </div>
+                                                            <div class="progress-segment progress-shelter">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="row profile_header">
+                                    <div class="col-lg-8 order-lg-1 order-2">
+                                        <div class="profile_card profile_mr">
+                                            <h3>Project Info</h3>
+                                            <div class="my_line"></div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-6">
+                                                    <div class="profile_info">
+                                                        <span>Project</span>
+                                                        <p>PBC</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-6">
+                                                    <div class="profile_info">
+                                                        <span>Zone</span>
+                                                        <p>6789</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="profile_info">
+                                                        <span>Contract Number</span>
+                                                        <p>90430830893459</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 order-lg-2 order-1">
+                                        <div class="profiile_tab_card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="sokhna_profile d-flex">
+                                                        <img src="images/person/profile.png" alt="profile">
+                                                        <div class="sokhna_name">
+                                                            <h3>PORTO SOKHNA</h3>
+                                                            <div class="d-flex">
+                                                                <span>Cabana Zone</span>
+                                                                <span>#234324</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <!-- Change this CSS code to increase or decrease the percentages below to develop -->
+                                                     <style>
+                                                        :root {
+                                                                --consumed-percentage: 20%;
+                                                                --rental-percentage: 30%;
+                                                                --remaining-percentage: 50%;
+                                                            }
+                                                     </style>
+                                                     <!-- ======= -->
+                                                    <div class="sokhna_progress">
+                                                        <div class="sokhna_progress_label">
+                                                            <div class="row">
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>20</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box1"></div>
+                                                                            <p>Remaining</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>5</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box2"></div>
+                                                                            <p>Consumed</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>5</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box3"></div>
+                                                                            <p>Rental</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>30</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box"></div>
+                                                                            <p>Nights</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                           
+                                                            
+                                                        </div>
+                                                        <div class="progress-bar">
+                                                            <div class="progress-segment progress-food">
+                                                                
+                                                            </div>
+                                                            <div class="progress-segment progress-clothes">
+                                                                
+                                                            </div>
+                                                            <div class="progress-segment progress-shelter">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div class="row profile_header">
+                                    <div class="col-lg-8 order-lg-1 order-2">
+                                        <div class="profile_card profile_mr">
+                                            <h3>Project Info</h3>
+                                            <div class="my_line"></div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-6">
+                                                    <div class="profile_info">
+                                                        <span>Project</span>
+                                                        <p>PBC</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-6">
+                                                    <div class="profile_info">
+                                                        <span>Zone</span>
+                                                        <p>6789</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="profile_info">
+                                                        <span>Contract Number</span>
+                                                        <p>90430830893459</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 order-lg-2 order-1">
+                                        <div class="profiile_tab_card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="sokhna_profile d-flex">
+                                                        <img src="images/person/profile.png" alt="profile">
+                                                        <div class="sokhna_name">
+                                                            <h3>PORTO SOKHNA</h3>
+                                                            <div class="d-flex">
+                                                                <span>Cabana Zone</span>
+                                                                <span>#234324</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <!-- Change this CSS code to increase or decrease the percentages below to develop -->
+                                                     <style>
+                                                        :root {
+                                                                --consumed-percentage: 20%;
+                                                                --rental-percentage: 30%;
+                                                                --remaining-percentage: 50%;
+                                                            }
+                                                     </style>
+                                                     <!-- ======= -->
+                                                    <div class="sokhna_progress">
+                                                        <div class="sokhna_progress_label">
+                                                            <div class="row">
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>20</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box1"></div>
+                                                                            <p>Remaining</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>5</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box2"></div>
+                                                                            <p>Consumed</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>5</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box3"></div>
+                                                                            <p>Rental</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>30</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box"></div>
+                                                                            <p>Nights</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                           
+                                                            
+                                                        </div>
+                                                        <div class="progress-bar">
+                                                            <div class="progress-segment progress-food">
+                                                                
+                                                            </div>
+                                                            <div class="progress-segment progress-clothes">
+                                                                
+                                                            </div>
+                                                            <div class="progress-segment progress-shelter">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-matrouh" role="tabpanel" aria-labelledby="nav-matrouh-tab">
+                                <div class="row profile_header">
+                                    <div class="col-lg-8 order-lg-1 order-2">
+                                        <div class="profile_card profile_mr">
+                                            <h3>Project Info</h3>
+                                            <div class="my_line"></div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-6">
+                                                    <div class="profile_info">
+                                                        <span>Project</span>
+                                                        <p>PBC</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-6">
+                                                    <div class="profile_info">
+                                                        <span>Zone</span>
+                                                        <p>6789</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-12">
+                                                    <div class="profile_info">
+                                                        <span>Contract Number</span>
+                                                        <p>90430830893459</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 order-lg-2 order-1">
+                                        <div class="profiile_tab_card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="sokhna_profile d-flex">
+                                                        <img src="images/person/profile.png" alt="profile">
+                                                        <div class="sokhna_name">
+                                                            <h3>PORTO SOKHNA</h3>
+                                                            <div class="d-flex">
+                                                                <span>Cabana Zone</span>
+                                                                <span>#234324</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <!-- Change this CSS code to increase or decrease the percentages below to develop -->
+                                                     <style>
+                                                        :root {
+                                                                --consumed-percentage: 20%;
+                                                                --rental-percentage: 30%;
+                                                                --remaining-percentage: 50%;
+                                                            }
+                                                     </style>
+                                                     <!-- ======= -->
+                                                    <div class="sokhna_progress">
+                                                        <div class="sokhna_progress_label">
+                                                            <div class="row">
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>20</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box1"></div>
+                                                                            <p>Remaining</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>5</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box2"></div>
+                                                                            <p>Consumed</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>5</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box3"></div>
+                                                                            <p>Rental</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-3 ps-0 pe-0">
+                                                                    <div class="sokhan_label_items">
+                                                                        <h4>30</h4>
+                                                                        <div class="d-flex justify-content-center">
+                                                                            <div class="cricle_box"></div>
+                                                                            <p>Nights</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                           
+                                                            
+                                                        </div>
+                                                        <div class="progress-bar">
+                                                            <div class="progress-segment progress-food">
+                                                                
+                                                            </div>
+                                                            <div class="progress-segment progress-clothes">
+                                                                
+                                                            </div>
+                                                            <div class="progress-segment progress-shelter">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+     </section>
+    <!-- ========== Booking Status Area End == -->
+    
+    <!-- ========== Navbar END == -->
+    
+    <!-- ========== Navbar END == -->
+    <!-- ========== Design Code START == -->
+     <!-- <img class="background_murk" src="images/design/background_effect.png" alt="bg"> -->
+    <!-- ========== Design Code END == -->
+    <!-- ========== All JS Link Here  -->
+  
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+   
+    
+</body>
+</html>

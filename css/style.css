@@ -2503,7 +2503,139 @@ input[type="range"]:nth-child(3) {
   z-index: 3; /* Keeps the first thumb on top of the second */
 }
 
+.profile_card{
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #FCFCFD;
+  padding: 26px 24px;
+}
+.profile_card h3{
+  font-family: Quicksand;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.2199999988079071px;
+  text-align: left;
+  color: #2C1C5A;  
+  margin-top: 0px;
+}
+.profile_info span{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  color: #878787;  
+}
+.profile_info span{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;  
+  color: #878787;  
+}
+.profile_info a{
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.5px;
+  text-align: left;
+  color: #4D308E;  
+  text-decoration: none;
+}
+.profile_img{
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #FCFCFD;
+  padding: 16px 24px;
 
+}
+.img_border{
+  width: 128px;
+  height: 128px;
+}
+.profile_images .edit_img{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.edit_img{
+  background-color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+  
+  cursor: pointer;
+}
+.edit_img img {
+	padding: 13px 0px 0px 3px;
+}
+.profile_img  h3{
+  font-family: Quicksand;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.2199999988079071px;
+  color: #2C1C5A;  
+  text-align: center;
+  margin-top: 16px;
+}
+.profile_img  p{
+  font-family: Quicksand;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.2199999988079071px;  
+  text-align: center;
+  color: #878787;
+}
+
+.profiile_tab_card{
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px 16px;
+}
+.profiile_tab_card .sokhna_name h3{
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: left;
+color: #2C1B5A;       
+margin-top: 0px;
+}
+.profiile_tab_card .sokhna_profile img{
+ width: 80px;
+ height: 80px;
+}
+.profiile_tab_card .sokhna_name span {
+	font-family: Quicksand;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 20px;
+	color: #878787;
+	padding: 2px 5px 2px 5px;
+	background-color: #F7F5FA;
+	margin-right: 4px;
+	border-radius: 100px;
+}
+.profiile_tab_card .sokhan_label_items h4 {
+	font-family: Quicksand;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 17.75px;
+	color: #374151;
+}
+.profiile_tab_card .sokhan_label_items p {
+	font-family: Quicksand;
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 17.75px;
+	color: #878787;
+}
+.profile_mr {
+  padding-bottom: 73px;
+}
 
 
 
