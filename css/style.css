@@ -10,7 +10,7 @@ body {
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-	width: 100% !important;
+	/* width: 100% !important; */
 }
 button, a{
   transition: all .3s linear
@@ -275,8 +275,26 @@ button, a{
     position: relative;
     background-color: #ffffff;
   }
-  .selected-start-start .tarik_p{
-    background-color: #4D308E;
+  .calendar-body div p::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 1.6px;
+    margin: -2px auto 0;
+  }
+  .calendar-body div p::after
+        
+        {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 1.6px;
+            margin: 5px auto 0;
+        }
+  .selected-start-start P{
+    background-color: #4D308E !important;
     color: #fff;
     border-radius: 100px !important;
   }
@@ -286,7 +304,7 @@ button, a{
     border-radius: 100px !important;
   }
   .prev-next-month{
-    margin-top: 16px;
+    margin-top: 15px;
   }
   .calendar-body div {
     /* display: grid; */
@@ -299,7 +317,7 @@ button, a{
     color: #fff;
     border-radius: 100px !important;
   }
-  .tarik_p {
+  .calendar-body div p {
     padding: 16px 10px 10px 10px;
     width: 56px;
     height: 56px;
@@ -360,9 +378,9 @@ button, a{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
-    margin-left: 7px;
-    margin-right: -7px;
-    margin-top: 9px;
+    /* margin-left: 7px; */
+    /* margin-right: -7px; */
+    margin-top: 21px;
   }
   .calendar-body div {
     position: relative;
@@ -442,10 +460,10 @@ button, a{
     border-radius: 100%;
   }
   .arrow-left {
-    left: 0px; /* Adjust to fit nicely outside the calendar */
+    left: 4%;
   }
   .arrow-right {
-    right: 0px; /* Adjust to fit nicely outside the calendar */
+    right: 4%; /* Adjust to fit nicely outside the calendar */
   }
   .booking-info {
     margin-top: 20px;
@@ -2484,6 +2502,10 @@ input[type="range"]:nth-child(2) {
 input[type="range"]:nth-child(3) {
   z-index: 3; /* Keeps the first thumb on top of the second */
 }
+
+
+
+
 
 
 /*--- /.price-range-slider ---*/
